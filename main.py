@@ -24,27 +24,26 @@ async def generate_ics(output_folder: str, source_name: str, source: str) -> Non
         beijing_tz = pytz.timezone("Asia/Shanghai")
         if event:
             name, begin, end, description, location = event.split("\n")
-            # begin = [int(b) for b in begin.split("-")]
-            # end = [int(e) for e in end.split("-")]
 
             e.name = name
-            e.begin = (
-                datetime.strptime(begin, date_format)
-                .replace(tzinfo=beijing_tz)
-                .astimezone(pytz.utc)
-            )
-            e.end = (
-                datetime.strptime(end, date_format)
-                .replace(tzinfo=beijing_tz)
-                .astimezone(pytz.utc)
-            )
-            # e.begin = datetime(begin[0], begin[1], begin[2], begin[3], begin[4])
-            # e.end = datetime(end[0], end[1], end[2], end[3], end[4])
+            #e.begin = (
+            #    datetime.strptime(begin, date_format)
+            #    .replace(tzinfo=beijing_tz)
+            #    .astimezone(pytz.utc)
+            #)
+            #e.end = (
+            #    datetime.strptime(end, date_format)
+            #    .replace(tzinfo=beijing_tz)
+            #    .astimezone(pytz.utc)
+            #)
+            e.begin = begin
+            e.end = end
+
             e.description = description
             e.location = location
             c.events.add(e)
     async with aiofiles.open(f"{output_folder}/{source_name}.ics", "w") as ics_file:
-        await ics_file.writelines(c)
+        await ics_file.writelines(c.serialize_iter())
         logger.info(f"{source_name}.ics DONE.")
 
 
