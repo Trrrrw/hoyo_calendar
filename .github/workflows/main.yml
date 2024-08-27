@@ -25,12 +25,14 @@ jobs:
       - name: Run script
         run: python main.py
 
-      - name: Commit and push
+      - name: Commit
         run: |
           git config --local user.email "wzhhenry@qq.com"
           git config --local user.name "Trrrrw"
           git add .
           git commit -m "Auto convert"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_KEY }}
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.DEPLOY_KEY }}
