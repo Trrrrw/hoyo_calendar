@@ -44,7 +44,7 @@ async def main(source_files_folder: str, output_folder: str) -> None:
             source = await File(
                 os.path.join(source_files_folder, source_file)
             ).read_async()
-            tasks.append(generate_ics(output_folder, source_file.split(".")[0], source))
+            tasks.append(generate_ics(output_folder, os.path.splitext(source_file)[0], source))
     logger.info(f"{len(tasks)} files founded.")
     await asyncio.gather(*tasks)
 
