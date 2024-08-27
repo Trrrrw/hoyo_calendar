@@ -4,7 +4,7 @@
 2. 打开日历软件，进入设置
 3. 找到日程导入 -> URL导入
 
-![示例 HyperOs](https://jsd.cdn.zzko.cn/gh/Trrrrw/picx-images-hosting@master/hoyo_calendar_0.45ma7rr2h.avif)
+![示例 HyperOs](https://raw.gitmirror.com/Trrrrw/picx-images-hosting@master/hoyo_calendar_0.45ma7rr2h.avif)
 
 ||GitHub|gitmirror|
 |-|-|-|
