@@ -21,12 +21,15 @@ async def generate_ics(output_folder: str, source_name: str, source: str) -> Non
         event = event.strip()
         if event:
             name, begin, end, description, location = event.split("\n")
-            begin = [int(b) for b in begin.split("-")]
-            end = [int(e) for e in end.split("-")]
+            date_format = "%Y-%m-%d-%H-%M"
+            # begin = [int(b) for b in begin.split("-")]
+            # end = [int(e) for e in end.split("-")]
 
             e.name = name
-            e.begin = datetime(begin[0], begin[1], begin[2], begin[3], begin[4])
-            e.end = datetime(end[0], end[1], end[2], end[3], end[4])
+            e.begin = datetime.strptime(begin, date_format)
+            e.end = datetime.strptime(end, date_format)
+            # e.begin = datetime(begin[0], begin[1], begin[2], begin[3], begin[4])
+            # e.end = datetime(end[0], end[1], end[2], end[3], end[4])
             e.description = description
             e.location = location
             c.events.add(e)
@@ -44,7 +47,9 @@ async def main(source_files_folder: str, output_folder: str) -> None:
             source = await File(
                 os.path.join(source_files_folder, source_file)
             ).read_async()
-            tasks.append(generate_ics(output_folder, os.path.splitext(source_file)[0], source))
+            tasks.append(
+                generate_ics(output_folder, os.path.splitext(source_file)[0], source)
+            )
     logger.info(f"{len(tasks)} files founded.")
     await asyncio.gather(*tasks)
 
