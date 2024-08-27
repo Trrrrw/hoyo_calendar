@@ -35,4 +35,4 @@ jobs:
       - name: Push
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.DEPLOY_KEY }}
+          github_token: ${{ secrets.picx-image-hosting }}
