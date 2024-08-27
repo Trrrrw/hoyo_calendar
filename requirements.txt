@@ -1,6 +1,6 @@
 pyyaml
 aiofiles
-ics
+icalendar
 loguru
 pytz
 
