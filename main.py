@@ -42,7 +42,7 @@ async def generate_ics(output_folder: str, source_name: str, source: str) -> Non
         event = event.strip()
         if event:
             name, begin, end, description, location = event.split("\n")
-            c = event_add(c, name, begin, description, location, end)
+            c = await event_add(c, name, begin, description, location, end)
 
     async with aiofiles.open(f"{output_folder}/{source_name}.ics", "wb") as ics_file:
         await ics_file.write(c.to_ical())
