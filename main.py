@@ -20,24 +20,20 @@ async def generate_ics(output_folder: str, source_name: str, source: str) -> Non
     for event in source.split(";;"):
         e = Event()
         event = event.strip()
-        date_format = "%Y-%m-%d-%H-%M"
+        date_format = "%Y-%m-%d %H:%M:%S"
         beijing_tz = pytz.timezone("Asia/Shanghai")
         if event:
             name, begin, end, description, location = event.split("\n")
 
             e.name = name
-            #e.begin = (
-            #    datetime.strptime(begin, date_format)
-            #    .replace(tzinfo=beijing_tz)
-            #    .astimezone(pytz.utc)
-            #)
-            #e.end = (
-            #    datetime.strptime(end, date_format)
-            #    .replace(tzinfo=beijing_tz)
-            #    .astimezone(pytz.utc)
-            #)
-            e.begin = begin
-            e.end = end
+            e.begin = beijing_tz.localize(
+                datetime.strptime(begin, date_format)
+            ).astimezone(pytz.utc)
+            e.end = beijing_tz.localize(datetime.strptime(end, date_format)).astimezone(
+                pytz.utc
+            )
+            # e.begin = begin
+            # e.end = end
 
             e.description = description
             e.location = location
