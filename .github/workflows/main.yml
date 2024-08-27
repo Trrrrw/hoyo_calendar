@@ -1,4 +1,4 @@
-name: 生成 ics
+name: generate ics
 
 on:
   push:
