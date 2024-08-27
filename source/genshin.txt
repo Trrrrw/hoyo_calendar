@@ -1,0 +1,6 @@
+event1
+2024-08-25-12-00
+2024-08-25-13-00
+description
+location
+;;

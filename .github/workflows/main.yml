@@ -3,7 +3,7 @@ name: generate ics
 on:
   push:
     paths:
-      - source
+      - source/*.txt
 
 jobs:
   generate-ics-files:
