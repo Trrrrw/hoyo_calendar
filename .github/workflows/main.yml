@@ -32,4 +32,5 @@ jobs:
           git add .
           git commit -m "Auto convert"
           git push
-          
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_KEY }}
