@@ -1,6 +1,7 @@
 import os
 import asyncio
 import aiofiles
+import pytz
 
 from ics import Calendar, Event
 from datetime import datetime
@@ -19,15 +20,24 @@ async def generate_ics(output_folder: str, source_name: str, source: str) -> Non
     for event in source.split(";;"):
         e = Event()
         event = event.strip()
+        date_format = "%Y-%m-%d-%H-%M"
+        beijing_tz = pytz.timezone("Asia/Shanghai")
         if event:
             name, begin, end, description, location = event.split("\n")
-            date_format = "%Y-%m-%d-%H-%M"
             # begin = [int(b) for b in begin.split("-")]
             # end = [int(e) for e in end.split("-")]
 
             e.name = name
-            e.begin = datetime.strptime(begin, date_format)
-            e.end = datetime.strptime(end, date_format)
+            e.begin = (
+                datetime.strptime(begin, date_format)
+                .replace(tzinfo=beijing_tz)
+                .astimezone(pytz.utc)
+            )
+            e.end = (
+                datetime.strptime(end, date_format)
+                .replace(tzinfo=beijing_tz)
+                .astimezone(pytz.utc)
+            )
             # e.begin = datetime(begin[0], begin[1], begin[2], begin[3], begin[4])
             # e.end = datetime(end[0], end[1], end[2], end[3], end[4])
             e.description = description

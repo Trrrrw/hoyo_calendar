@@ -2,4 +2,5 @@ pyyaml
 aiofiles
 ics
 loguru
+pytz
 
