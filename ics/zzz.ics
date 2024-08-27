@@ -1,9 +1,11 @@
 BEGIN:VCALENDAR
 BEGIN:VEVENT
-SUMMARY:event1
-DTSTART;TZID=Asia/Shanghai:20240825T120000
-DTEND;TZID=Asia/Shanghai:20240825T130000
-DESCRIPTION:description
-LOCATION:location
+SUMMARY:「青如玉壶冰」调频
+DTSTART;TZID=Asia/Shanghai:20240814T110000
+DTEND;TZID=Asia/Shanghai:20240904T115959
+DESCRIPTION:活动期间，限定S级代理人[青衣(击破·电)]以及A
+ 级代理人[比利(强攻·物理)]、[可琳(强攻·物理)]的调频
+ 获取概率将大幅提升！
+LOCATION:绝区零-代理人调频
 END:VEVENT
 END:VCALENDAR
