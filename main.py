@@ -1,8 +1,6 @@
 import os
 import asyncio
 import aiofiles
-import pytz
-import dateutil.tz
 import zoneinfo
 
 from icalendar import Calendar, Event
@@ -21,20 +19,27 @@ async def generate_ics(output_folder: str, source_name: str, source: str) -> Non
     c = Calendar()
     for event in source.split(";;"):
         e = Event()
-        tz = dateutil.tz.tzstr("Asia/Shanghai")
         event = event.strip()
         date_format = "%Y-%m-%d %H:%M:%S"
         if event:
             name, begin, end, description, location = event.split("\n")
 
-            e.add('summary', name)
-            e.add('dtstart', datetime.strptime(begin, date_format).replace(tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")))
-            e.add('dtend', datetime.strptime(end, date_format).replace(tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")))
-            e.add('description',description)
-            e.add('location',location)
+            e.add("summary", name)
+            e.add(
+                "dtstart",
+                datetime.strptime(begin, date_format).replace(
+                    tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")
+                ),
+            )
+            e.add(
+                "dtend",
+                datetime.strptime(end, date_format).replace(
+                    tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")
+                ),
+            )
+            e.add("description", description)
+            e.add("location", location)
 
-            #e.description = description
-            #e.location = location
             c.add_component(e)
     async with aiofiles.open(f"{output_folder}/{source_name}.ics", "wb") as ics_file:
         await ics_file.write(c.to_ical())
