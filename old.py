@@ -14,36 +14,33 @@ async def init_source_folder() -> None:
     logger.info("initing source files...")
 
 
-async def event_add(
-    cal: Calendar, name: str, begin: str, description: str, location: str, end=None
-) -> Calendar:
-    event = Event()
-    date_format = "%Y-%m-%d %H:%M:%S"
-    event.add("summary", name)
-    event.add(
-        "dtstart",
-        datetime.strptime(begin, date_format).replace(
-            tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")
-        ),
-    )
-    if end:
-        # event.add("dtend",datetime.strptime(end,date_format).replace(tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")))
-        cal = await event_add(cal, name + " 结束", end, description, location)
-    event.add("description", description)
-    event.add("location", location)
-    cal.add_component(event)
-    return cal
-
-
 async def generate_ics(output_folder: str, source_name: str, source: str) -> None:
     logger.info(f"generateing {source_name}.ics...")
     c = Calendar()
     for event in source.split(";;"):
+        e = Event()
         event = event.strip()
+        date_format = "%Y-%m-%d %H:%M:%S"
         if event:
             name, begin, end, description, location = event.split("\n")
-            c = event_add(c, name, begin, description, location, end)
 
+            e.add("summary", name)
+            e.add(
+                "dtstart",
+                datetime.strptime(begin, date_format).replace(
+                    tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")
+                ),
+            )
+            e.add(
+                "dtend",
+                datetime.strptime(end, date_format).replace(
+                    tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")
+                ),
+            )
+            e.add("description", description)
+            e.add("location", location)
+
+            c.add_component(e)
     async with aiofiles.open(f"{output_folder}/{source_name}.ics", "wb") as ics_file:
         await ics_file.write(c.to_ical())
         logger.info(f"{source_name}.ics DONE.")
