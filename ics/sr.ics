@@ -1,14 +1,30 @@
 BEGIN:VCALENDAR
 BEGIN:VEVENT
-SUMMARY:角色跃迁：椒丘&花火 结束
+SUMMARY:角色活动跃迁：「鼎中捭阖」、「焰锦游鱼」 结
+ 束
 DTSTART;TZID=Asia/Shanghai:20240909T150000
 DESCRIPTION:角色跃迁：椒丘&花火
 LOCATION:星铁-角色跃迁
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:角色跃迁：椒丘&花火
+SUMMARY:角色活动跃迁：「鼎中捭阖」、「焰锦游鱼」
 DTSTART;TZID=Asia/Shanghai:20240821T120000
 DESCRIPTION:角色跃迁：椒丘&花火
 LOCATION:星铁-角色跃迁
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:光锥活动跃迁：「流光定影」、「溯回忆象」 结
+ 束
+DTSTART;TZID=Asia/Shanghai:20240909T150000
+DESCRIPTION:光锥跃迁：「那无数个春天（虚无）」&「游戏
+ 尘寰（同谐）」
+LOCATION:星铁-光锥跃迁
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:光锥活动跃迁：「流光定影」、「溯回忆象」
+DTSTART;TZID=Asia/Shanghai:20240821T120000
+DESCRIPTION:光锥跃迁：「那无数个春天（虚无）」&「游戏
+ 尘寰（同谐）」
+LOCATION:星铁-光锥跃迁
 END:VEVENT
 END:VCALENDAR
