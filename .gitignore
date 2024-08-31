@@ -1,4 +1,5 @@
 .venv
 hoyo_calendar.log
 test.py
+old.py
 push.sh
