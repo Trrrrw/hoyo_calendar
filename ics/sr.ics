@@ -27,4 +27,34 @@ DESCRIPTION:光锥跃迁：「那无数个春天（虚无）」&「游戏
  尘寰（同谐）」
 LOCATION:星铁-光锥跃迁
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:角色活动跃迁：「飙驭霆击」、「铭心之萃」 结
+ 束
+DTSTART;TZID=Asia/Shanghai:20241002T115959
+DESCRIPTION:角色跃迁：飞霄&卡芙卡&黑天鹅&知更鸟
+LOCATION:星铁-角色跃迁
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:角色活动跃迁：「飙驭霆击」、「铭心之萃」
+DTSTART;TZID=Asia/Shanghai:20240910T110000
+DESCRIPTION:角色跃迁：飞霄&卡芙卡&黑天鹅&知更鸟
+LOCATION:星铁-角色跃迁
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:光锥活动跃迁：「流光定影」、「真意之汇」 结
+ 束
+DTSTART;TZID=Asia/Shanghai:20241002T115959
+DESCRIPTION:光锥跃迁：「我将，巡征追猎（巡猎）」&「只
+ 需等待（虚无）」&「重塑时光之忆（虚无）」&「夜色流
+ 光溢彩（同谐）」
+LOCATION:星铁-光锥跃迁
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:光锥活动跃迁：「流光定影」、「真意之汇」
+DTSTART;TZID=Asia/Shanghai:20240910T110000
+DESCRIPTION:光锥跃迁：「我将，巡征追猎（巡猎）」&「只
+ 需等待（虚无）」&「重塑时光之忆（虚无）」&「夜色流
+ 光溢彩（同谐）」
+LOCATION:星铁-光锥跃迁
+END:VEVENT
 END:VCALENDAR
