@@ -10,10 +10,6 @@ from loguru import logger
 from fileio import File
 
 
-async def init_source_folder() -> None:
-    logger.info("initing source files...")
-
-
 async def event_add(
     cal: Calendar, name: str, begin: str, description: str, location: str, end=None
 ) -> Calendar:
