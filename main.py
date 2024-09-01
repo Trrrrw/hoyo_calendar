@@ -23,8 +23,7 @@ async def event_add(
         ),
     )
     if end:
-        # event.add("dtend",datetime.strptime(end,date_format).replace(tzinfo=zoneinfo.ZoneInfo("Asia/Shanghai")))
-        cal = await event_add(cal, name + " 结束", end, description, location)
+        cal = await event_add(cal, name + " 结束", end, description + " 结束", location)
     event.add("description", description)
     event.add("location", location)
     cal.add_component(event)
@@ -34,15 +33,31 @@ async def event_add(
 async def generate_ics(output_folder: str, source_name: str, source: str) -> None:
     logger.info(f"generateing {source_name}.ics...")
     c = Calendar()
+    different_types = {}
     for event in source.split(";;"):
         event = event.strip()
         if event:
             name, begin, end, description, location = event.split("\n")
             c = await event_add(c, name, begin, description, location, end)
+            try:
+                single_type = different_types[location.split("-")[1]]
+            except KeyError:
+                different_types[location.split("-")[1]] = Calendar()
+                single_type = different_types[location.split("-")[1]]
+            different_types[location.split("-")[1]] = await event_add(
+                single_type, name, begin, description, location, end
+            )
 
     async with aiofiles.open(f"{output_folder}/{source_name}.ics", "wb") as ics_file:
         await ics_file.write(c.to_ical())
         logger.info(f"{source_name}.ics DONE.")
+
+    for type_key, type_value in different_types.items():
+        async with aiofiles.open(
+            f"{output_folder}/{source_name}-{type_key}.ics", "wb"
+        ) as ics_file:
+            await ics_file.write(type_value.to_ical())
+            logger.info(f"{source_name}-{type_key}.ics DONE.")
 
 
 async def main(source_files_folder: str, output_folder: str) -> None:

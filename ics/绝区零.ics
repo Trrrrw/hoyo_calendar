@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:「青如玉壶冰」调频 结束
+DTSTART;TZID=Asia/Shanghai:20240904T115959
+DESCRIPTION:代理人调频：[青衣(击破·电)]、[比利(强攻·物
+ 理)]、[可琳(强攻·物理)] 结束
+LOCATION:绝区零-调频-代理人调频
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「青如玉壶冰」调频
+DTSTART;TZID=Asia/Shanghai:20240814T110000
+DESCRIPTION:代理人调频：[青衣(击破·电)]、[比利(强攻·物
+ 理)]、[可琳(强攻·物理)]
+LOCATION:绝区零-调频-代理人调频
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「喧哗奏鸣」调频 结束
+DTSTART;TZID=Asia/Shanghai:20240904T115959
+DESCRIPTION:音擎调频：[玉壶青冰(击破)]、[仿制星徽引擎(
+ 强攻)]、[家政员(强攻)] 结束
+LOCATION:绝区零-调频-音擎调频
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「喧哗奏鸣」调频
+DTSTART;TZID=Asia/Shanghai:20240814T110000
+DESCRIPTION:音擎调频：[玉壶青冰(击破)]、[仿制星徽引擎(
+ 强攻)]、[家政员(强攻)]
+LOCATION:绝区零-调频-音擎调频
+END:VEVENT
+END:VCALENDAR
