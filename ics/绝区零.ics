@@ -27,4 +27,32 @@ DESCRIPTION:音擎调频：[玉壶青冰(击破)]、[仿制星徽引擎(
  强攻)]、[家政员(强攻)]
 LOCATION:绝区零-调频-音擎调频
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「『查无此人』」调频 结束
+DTSTART;TZID=Asia/Shanghai:20240924T145959
+DESCRIPTION:代理人调频：[简(异常·物理)]、[赛斯(防护·电)
+ ]、[安比(击破·电)] 结束
+LOCATION:绝区零-调频-代理人调频
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「『查无此人』」调频
+DTSTART;TZID=Asia/Shanghai:20240904T120000
+DESCRIPTION:代理人调频：[简(异常·物理)]、[赛斯(防护·电)
+ ]、[安比(击破·电)]
+LOCATION:绝区零-调频-代理人调频
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「喧哗奏鸣」调频 结束
+DTSTART;TZID=Asia/Shanghai:20240924T145959
+DESCRIPTION:音擎调频：[淬锋钳刺(异常)]、[维序者·特化型(
+ 防护)]、[德玛拉电池Ⅱ型(击破)] 结束
+LOCATION:绝区零-调频-音擎调频
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「喧哗奏鸣」调频
+DTSTART;TZID=Asia/Shanghai:20240904T120000
+DESCRIPTION:音擎调频：[淬锋钳刺(异常)]、[维序者·特化型(
+ 防护)]、[德玛拉电池Ⅱ型(击破)]
+LOCATION:绝区零-调频-音擎调频
+END:VEVENT
 END:VCALENDAR
