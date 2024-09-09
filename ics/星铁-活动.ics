@@ -62,4 +62,18 @@ DESCRIPTION:活动期间，登录游戏即可领取星琼*1000、燃料*10
  、梦之珠泪*150！
 LOCATION:星铁-活动-活动
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「星天演武仪典」活动 结束
+DTSTART;TZID=Asia/Shanghai:20241021T035959
+DESCRIPTION:活动中，开拓者将作为贝洛伯格代表队卢卡选
+ 手的教练，共同参与「星天演武仪典」赛事。 结束
+LOCATION:星铁-活动-活动
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「星天演武仪典」活动
+DTSTART;TZID=Asia/Shanghai:20240910T110000
+DESCRIPTION:活动中，开拓者将作为贝洛伯格代表队卢卡选
+ 手的教练，共同参与「星天演武仪典」赛事。
+LOCATION:星铁-活动-活动
+END:VEVENT
 END:VCALENDAR
