@@ -4,26 +4,26 @@ SUMMARY:「瑞彩流虹」累计登录七天获得纠缠之缘*10 结束
 DTSTART;TZID=Asia/Shanghai:20240918T035959
 DESCRIPTION:「瑞彩流虹」累计登录七天获得纠缠之缘*10 结
  束
-LOCATION:原神-活动-活动
+LOCATION:原神-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「瑞彩流虹」累计登录七天获得纠缠之缘*10
 DTSTART;TZID=Asia/Shanghai:20240830T040000
 DESCRIPTION:「瑞彩流虹」累计登录七天获得纠缠之缘*10
-LOCATION:原神-活动-活动
+LOCATION:原神-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「嘟嘟可砰砰历险记」活动：奇趣炸鱼挑战 结束
 DTSTART;TZID=Asia/Shanghai:20240923T035959
 DESCRIPTION:指挥嘟嘟可放置炸弹，并将其引爆，击退所有
  角角鱼敌人，赢取物资奖励！ 结束
-LOCATION:原神-活动-活动
+LOCATION:原神-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「嘟嘟可砰砰历险记」活动：奇趣炸鱼挑战
 DTSTART;TZID=Asia/Shanghai:20240909T100000
 DESCRIPTION:指挥嘟嘟可放置炸弹，并将其引爆，击退所有
  角角鱼敌人，赢取物资奖励！
-LOCATION:原神-活动-活动
+LOCATION:原神-活动
 END:VEVENT
 END:VCALENDAR

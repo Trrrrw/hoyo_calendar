@@ -3,13 +3,13 @@ BEGIN:VEVENT
 SUMMARY:角色祈愿：「鲨鲨逐浪游」&「叶落风随」 结束
 DTSTART;TZID=Asia/Shanghai:20240917T175900
 DESCRIPTION:角色祈愿：玛拉妮&枫原万叶 结束
-LOCATION:原神-祈愿-角色祈愿
+LOCATION:原神-祈愿
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:角色祈愿：「鲨鲨逐浪游」&「叶落风随」
 DTSTART;TZID=Asia/Shanghai:20240828T110000
 DESCRIPTION:角色祈愿：玛拉妮&枫原万叶
-LOCATION:原神-祈愿-角色祈愿
+LOCATION:原神-祈愿
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:武器祈愿：「法器·冲浪时光」&「单手剑·苍古自
@@ -17,7 +17,7 @@ SUMMARY:武器祈愿：「法器·冲浪时光」&「单手剑·苍古自
 DTSTART;TZID=Asia/Shanghai:20240917T175900
 DESCRIPTION:武器祈愿：「法器·冲浪时光」&「单手剑·苍古
  自由之誓」 结束
-LOCATION:原神-祈愿-武器祈愿
+LOCATION:原神-祈愿
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:武器祈愿：「法器·冲浪时光」&「单手剑·苍古自
@@ -25,6 +25,6 @@ SUMMARY:武器祈愿：「法器·冲浪时光」&「单手剑·苍古自
 DTSTART;TZID=Asia/Shanghai:20240828T110000
 DESCRIPTION:武器祈愿：「法器·冲浪时光」&「单手剑·苍古
  自由之誓」
-LOCATION:原神-祈愿-武器祈愿
+LOCATION:原神-祈愿
 END:VEVENT
 END:VCALENDAR

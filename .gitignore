@@ -3,3 +3,4 @@ hoyo_calendar.log
 test.py
 old.py
 push.sh
+fileio/__pycache__

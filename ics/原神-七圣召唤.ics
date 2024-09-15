@@ -5,7 +5,7 @@ DTSTART;TZID=Asia/Shanghai:20240923T035959
 DESCRIPTION:活动开启后，旅行者可前往猫尾酒馆的邀请板
  处，参与「热斗模式」特殊规则下的「七圣召唤」对局
  。 结束
-LOCATION:原神-七圣召唤-七圣召唤
+LOCATION:原神-七圣召唤
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「七圣召唤」热斗模式：奇策竞驰
@@ -13,6 +13,6 @@ DTSTART;TZID=Asia/Shanghai:20240907T100000
 DESCRIPTION:活动开启后，旅行者可前往猫尾酒馆的邀请板
  处，参与「热斗模式」特殊规则下的「七圣召唤」对局
  。
-LOCATION:原神-七圣召唤-七圣召唤
+LOCATION:原神-七圣召唤
 END:VEVENT
 END:VCALENDAR
