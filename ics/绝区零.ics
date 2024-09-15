@@ -102,6 +102,12 @@ DESCRIPTION:活动期间，绳匠可以前往HIA俱乐部寻找莱娅，
 LOCATION:绝区零-活动
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:1.2版本「火狱骑行」前瞻特别节目
+DTSTART;TZID=Asia/Shanghai:20240913T193000
+DESCRIPTION:1.2版本「火狱骑行」前瞻特别节目
+LOCATION:绝区零-前瞻特别节目
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:「第一幕，第一镜！」活动 结束
 DTSTART;TZID=Asia/Shanghai:20240923T035959
 DESCRIPTION:活动期间，新艾利都各个区域内存在不同的拍

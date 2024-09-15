@@ -38,6 +38,7 @@ async def generate_ics(output_folder: str, source_name: str, source: str) -> Non
         event = event.strip()
         if event:
             name, begin, end, description, location = event.split("\n")
+            if end == "None": end = None
             c = await event_add(c, name, begin, description, location, end)
             try:
                 single_type = different_types[location.split("-")[1]]
