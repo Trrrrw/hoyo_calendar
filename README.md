@@ -18,6 +18,7 @@
 - [全部](https://raw.gitmirror.com/Trrrrw/hoyo_calendar/main/ics/绝区零.ics)
 - [调频](https://raw.gitmirror.com/Trrrrw/hoyo_calendar/main/ics/绝区零-调频.ics)
 - [活动](https://raw.gitmirror.com/Trrrrw/hoyo_calendar/main/ics/绝区零-活动.ics)
+- [前瞻特别节目](https://raw.gitmirror.com/Trrrrw/hoyo_calendar/main/ics/绝区零-前瞻特别节目.ics)
 
 ![示例 HyperOs](https://raw.gitmirror.com/Trrrrw/picx-images-hosting/master/images/hoyo_calendar_0.45ma7rr2h.avif)
 
