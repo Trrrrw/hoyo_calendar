@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 BEGIN:VEVENT
 SUMMARY:角色祈愿：「鲨鲨逐浪游」&「叶落风随」 结束
-DTSTART;TZID=Asia/Shanghai:20240917T175900
+DTSTART;TZID=Asia/Shanghai:20240917T175959
 DESCRIPTION:角色祈愿：玛拉妮&枫原万叶 结束
 LOCATION:原神-祈愿
 END:VEVENT
@@ -14,7 +14,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:武器祈愿：「法器·冲浪时光」&「单手剑·苍古自
  由之誓」 结束
-DTSTART;TZID=Asia/Shanghai:20240917T175900
+DTSTART;TZID=Asia/Shanghai:20240917T175959
 DESCRIPTION:武器祈愿：「法器·冲浪时光」&「单手剑·苍古
  自由之誓」 结束
 LOCATION:原神-祈愿
@@ -68,6 +68,46 @@ SUMMARY:「嘟嘟可砰砰历险记」活动：奇趣炸鱼挑战
 DTSTART;TZID=Asia/Shanghai:20240909T100000
 DESCRIPTION:指挥嘟嘟可放置炸弹，并将其引爆，击退所有
  角角鱼敌人，赢取物资奖励！
+LOCATION:原神-活动
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:角色祈愿：「巡火猎秘」&「影寂天下人」 结束
+DTSTART;TZID=Asia/Shanghai:20241008T145959
+DESCRIPTION:角色祈愿：基尼奇&雷电将军 结束
+LOCATION:原神-祈愿
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:角色祈愿：「巡火猎秘」&「影寂天下人」
+DTSTART;TZID=Asia/Shanghai:20240917T180000
+DESCRIPTION:角色祈愿：基尼奇&雷电将军
+LOCATION:原神-祈愿
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:武器祈愿：「双手剑·山王长牙」&「长柄武器·薙
+ 草之稻光」 结束
+DTSTART;TZID=Asia/Shanghai:20241008T145959
+DESCRIPTION:武器祈愿：「双手剑·山王长牙」&「长柄武器·
+ 薙草之稻光」 结束
+LOCATION:原神-祈愿
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:武器祈愿：「双手剑·山王长牙」&「长柄武器·薙
+ 草之稻光」
+DTSTART;TZID=Asia/Shanghai:20240917T180000
+DESCRIPTION:武器祈愿：「双手剑·山王长牙」&「长柄武器·
+ 薙草之稻光」
+LOCATION:原神-祈愿
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「地脉移涌」活动 结束
+DTSTART;TZID=Asia/Shanghai:20240923T035959
+DESCRIPTION:「藏金之花」「启示之花」双倍掉落！ 结束
+LOCATION:原神-活动
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:「地脉移涌」活动
+DTSTART;TZID=Asia/Shanghai:20240916T040000
+DESCRIPTION:「藏金之花」「启示之花」双倍掉落！
 LOCATION:原神-活动
 END:VEVENT
 END:VCALENDAR

@@ -4,50 +4,50 @@ SUMMARY:「日抛忆质留影计划」 结束
 DTSTART;TZID=Asia/Shanghai:20240819T035959
 DESCRIPTION:拍摄照片达成目标，获取命运的足迹等奖励 结
  束
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「日抛忆质留影计划」
 DTSTART;TZID=Asia/Shanghai:20240807T120000
 DESCRIPTION:拍摄照片达成目标，获取命运的足迹等奖励
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「位面分裂」活动 结束
 DTSTART;TZID=Asia/Shanghai:20240821T035959
 DESCRIPTION:位面饰品限时双倍掉落 结束
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「位面分裂」活动
 DTSTART;TZID=Asia/Shanghai:20240814T040000
 DESCRIPTION:位面饰品限时双倍掉落
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「开拓，友谊魔法！」 结束
 DTSTART;TZID=Asia/Shanghai:20240909T035959
 DESCRIPTION:完成桶的试炼，获取命运的足迹等奖励 结束
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「开拓，友谊魔法！」
 DTSTART;TZID=Asia/Shanghai:20240821T120000
 DESCRIPTION:完成桶的试炼，获取命运的足迹等奖励
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:角色活动跃迁：「鼎中捭阖」、「焰锦游鱼」 结
  束
 DTSTART;TZID=Asia/Shanghai:20240909T150000
 DESCRIPTION:角色跃迁：椒丘&花火 结束
-LOCATION:星铁-跃迁-角色跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:角色活动跃迁：「鼎中捭阖」、「焰锦游鱼」
 DTSTART;TZID=Asia/Shanghai:20240821T120000
 DESCRIPTION:角色跃迁：椒丘&花火
-LOCATION:星铁-跃迁-角色跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:光锥活动跃迁：「流光定影」、「溯回忆象」 结
@@ -55,39 +55,39 @@ SUMMARY:光锥活动跃迁：「流光定影」、「溯回忆象」 结
 DTSTART;TZID=Asia/Shanghai:20240909T150000
 DESCRIPTION:光锥跃迁：「那无数个春天（虚无）」&「游戏
  尘寰（同谐）」 结束
-LOCATION:星铁-跃迁-光锥跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:光锥活动跃迁：「流光定影」、「溯回忆象」
 DTSTART;TZID=Asia/Shanghai:20240821T120000
 DESCRIPTION:光锥跃迁：「那无数个春天（虚无）」&「游戏
  尘寰（同谐）」
-LOCATION:星铁-跃迁-光锥跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「花藏繁生」活动 结束
 DTSTART;TZID=Asia/Shanghai:20240906T035959
 DESCRIPTION:拟造花萼限时双倍掉落 结束
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「花藏繁生」活动
 DTSTART;TZID=Asia/Shanghai:20240830T040000
 DESCRIPTION:拟造花萼限时双倍掉落
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:角色活动跃迁：「飙驭霆击」、「铭心之萃」 结
  束
 DTSTART;TZID=Asia/Shanghai:20241002T115959
 DESCRIPTION:角色跃迁：飞霄&卡芙卡&黑天鹅&知更鸟 结束
-LOCATION:星铁-跃迁-角色跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:角色活动跃迁：「飙驭霆击」、「铭心之萃」
 DTSTART;TZID=Asia/Shanghai:20240910T110000
 DESCRIPTION:角色跃迁：飞霄&卡芙卡&黑天鹅&知更鸟
-LOCATION:星铁-跃迁-角色跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:光锥活动跃迁：「流光定影」、「真意之汇」 结
@@ -96,7 +96,7 @@ DTSTART;TZID=Asia/Shanghai:20241002T115959
 DESCRIPTION:光锥跃迁：「我将，巡征追猎（巡猎）」&「只
  需等待（虚无）」&「重塑时光之忆（虚无）」&「夜色流
  光溢彩（同谐）」 结束
-LOCATION:星铁-跃迁-光锥跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:光锥活动跃迁：「流光定影」、「真意之汇」
@@ -104,34 +104,34 @@ DTSTART;TZID=Asia/Shanghai:20240910T110000
 DESCRIPTION:光锥跃迁：「我将，巡征追猎（巡猎）」&「只
  需等待（虚无）」&「重塑时光之忆（虚无）」&「夜色流
  光溢彩（同谐）」
-LOCATION:星铁-跃迁-光锥跃迁
+LOCATION:星铁-跃迁
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「飞星之礼」活动 结束
 DTSTART;TZID=Asia/Shanghai:20241023T060000
 DESCRIPTION:活动期间，登录游戏即可领取星琼*1000、燃料*10
  、梦之珠泪*150！ 结束
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「飞星之礼」活动
 DTSTART;TZID=Asia/Shanghai:20240910T110000
 DESCRIPTION:活动期间，登录游戏即可领取星琼*1000、燃料*10
  、梦之珠泪*150！
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「星天演武仪典」活动 结束
 DTSTART;TZID=Asia/Shanghai:20241021T035959
 DESCRIPTION:活动中，开拓者将作为贝洛伯格代表队卢卡选
  手的教练，共同参与「星天演武仪典」赛事。 结束
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:「星天演武仪典」活动
 DTSTART;TZID=Asia/Shanghai:20240910T110000
 DESCRIPTION:活动中，开拓者将作为贝洛伯格代表队卢卡选
  手的教练，共同参与「星天演武仪典」赛事。
-LOCATION:星铁-活动-活动
+LOCATION:星铁-活动
 END:VEVENT
 END:VCALENDAR
