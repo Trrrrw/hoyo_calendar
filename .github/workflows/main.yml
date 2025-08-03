@@ -32,8 +32,8 @@ jobs:
             - name: Deploy to server
               uses: burnett01/rsync-deployments@7.0.2
               with:
-                switches: -avzr --delete --exclude="./node_modules" --exclude="./.git" --exclude="./.github"
-                path: ./
+                switches: -avzr --delete
+                path: ./.output/
                 remote_path: /root/Trrrrw/hoyo_calendar/
                 remote_host: ${{ secrets.SSH_IP }}
                 remote_port: ${{ secrets.SSH_PORT }}
