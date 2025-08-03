@@ -33,7 +33,7 @@ jobs:
               uses: burnett01/rsync-deployments@7.0.2
               with:
                 switches: -avzr --delete
-                path: ./.output/server/
+                path: ./
                 remote_path: /root/Trrrrw/hoyo_calendar/
                 remote_host: ${{ secrets.SSH_IP }}
                 remote_port: ${{ secrets.SSH_PORT }}
