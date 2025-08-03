@@ -26,13 +26,13 @@ jobs:
             - name: Install dependencies
               run: yarn install --frozen-lockfile
 
-            - name: Build Vite project
+            - name: Build Nuxt project
               run: npx nuxt build
 
             - name: Deploy to server
               uses: burnett01/rsync-deployments@7.0.2
               with:
-                switches: -avzr --delete
+                switches: -avzr --delete --exclude="./node_modules" --exclude="./.git" --exclude="./.github"
                 path: ./
                 remote_path: /root/Trrrrw/hoyo_calendar/
                 remote_host: ${{ secrets.SSH_IP }}
