@@ -1,0 +1,41 @@
+name: Sync to server
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v3
+              with:
+                submodules: true
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: 20
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            - name: Use Yarn 4.9.1
+              run: corepack prepare yarn@4.9.1 --activate
+
+            - name: Install dependencies
+              run: yarn install --frozen-lockfile
+
+            - name: Build Vite project
+              run: npx nuxt build
+
+            - name: Deploy to server
+              uses: burnett01/rsync-deployments@7.0.2
+              with:
+                switches: -avzr --delete
+                path: ./.output/server/
+                remote_path: /root/Trrrrw/hoyo_calendar/
+                remote_host: ${{ secrets.SSH_IP }}
+                remote_port: ${{ secrets.SSH_PORT }}
+                remote_user: ${{ secrets.SSH_USER }}
+                remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
