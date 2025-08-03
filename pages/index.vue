@@ -1,16 +1,16 @@
 <script lang="ts" setup>
 import { CopyOutlined } from '#components';
 import games_data from '~/assets/data/data.json'
+import { copyText } from '~/utils/copyText';
 
 const switch_checked = ref<boolean>(false);
 const activeKey = ref(['1']);
 
-const handleClick = (event: MouseEvent, game_name: string, ann_type: string = '') => {
+const handleClick = async (event: MouseEvent, game_name: string, ann_type: string = '') => {
     // If you don't want click extra trigger collapse, you can prevent this:
     event.stopPropagation();
     const ics_url = `${window.location.origin}/ics${switch_checked.value ? '/continuous' : ''}/${game_name}${ann_type ? '/' + ann_type : ''}.ics`
-    console.log(ics_url)
-    message.info(`复制成功：${game_name}${ann_type ? ' - ' + ann_type : ''}`)
+    await copyText(ics_url, `复制成功：${game_name}${ann_type ? ' - ' + ann_type : ''}`)
 };
 </script>
 
