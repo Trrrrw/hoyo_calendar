@@ -1,6 +1,6 @@
 # 🗓️ 米哈游游戏日历订阅
 
-![Banner Image](./assets/img/banner.png)
+![Banner Image](./assets/img/banner.webp)
 
 ✨ 自动同步《原神》《星穹铁道》《绝区零》的官方活动日程到您的日历应用
 

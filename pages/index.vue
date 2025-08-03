@@ -18,7 +18,7 @@ const handleClick = (event: MouseEvent, game_name: string, ann_type: string = ''
     <a-flex vertical gap="middle" style="max-width: 800px; margin: 20px auto;">
         <a-card>
             <template #cover>
-                <img src="~/assets/img/banner.avif" alt="banner" loading="eager" />
+                <img src="~/assets/img/banner.webp" alt="banner" loading="eager" />
             </template>
             <a-card-meta title=" 米哈游游戏日历订阅">
                 <template #description>自动同步《原神》《星穹铁道》《绝区零》的官方活动日程到您的日历应用</template>
