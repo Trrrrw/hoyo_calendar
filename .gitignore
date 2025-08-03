@@ -1,15 +1,24 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
 
-# Virtual environments
-.venv
+# Node dependencies
+node_modules
 
-# VS Code
-.vscode
+# Logs
+logs
+*.log
 
-src/temp
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example

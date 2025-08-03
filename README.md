@@ -1,6 +1,6 @@
 # 🗓️ 米哈游游戏日历订阅
 
-![Banner Image](./docs/public/banner.png)
+![Banner Image](./assets/img/banner.png)
 
 ✨ 自动同步《原神》《星穹铁道》《绝区零》的官方活动日程到您的日历应用
 
@@ -58,20 +58,8 @@
 
 ## 🚀 快速开始
 ### 环境要求
-- Python 3.10+
-  - uv
 - Nodejs 18+
   - yarn
-
-### 环境变量
-| 名称             | 描述                                 |      |
-| ---------------- | ------------------------------------ | ---- |
-| `HC_CONFIGS_DIR` | 配置文件路径                         |      |
-| `HC_OUTPUT_DIR`  | 输出数据json文件路径                 |      |
-| `HC_ICS_DIR`     | 输出ics文件路径                      |      |
-| `DEBUG`          | 👇                                    | 可选 |
-
-> 如果设置为"TRUE"，httpx会从`src/temp/{游戏英文代号}`文件夹下寻找`ann_list.json`和`ann_content.json`文件作为响应数据
 
 ### 操作步骤
 ```bash
@@ -80,10 +68,6 @@ git clone https://github.com/Trrrrw/hoyo_calendar.git
 cd hoyo_calendar
 
 # 运行项目
-uv run main.py
-
-# 运行前端
-cd docs
 yarn
 yarn dev
 ```
