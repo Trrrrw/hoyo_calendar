@@ -5,19 +5,19 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 SUMMARY:代理人、音擎调频
-DTSTART;TZID=Asia/Shanghai:20250716T070000
-UID:028135f3@trrw.tech
-DESCRIPTION:代理人、音擎调频：柚叶(支援·物理)，星见雅(
- 异常·烈霜)，狸法七变化(支援)，霰落星殿(异常)
+DTSTART;TZID=Asia/Shanghai:20250806T120000
+UID:7aed103f@trrw.tech
+DESCRIPTION:代理人、音擎调频：爱丽丝(异常·物理)，月城
+ 柳(异常·电)，十方锻星(异常)，时流贤者(异常)
 LOCATION:绝区零-抽卡
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:代理人、音擎调频 结束
-DTSTART;TZID=Asia/Shanghai:20250806T115900
-UID:a7ddc2e5@trrw.tech
-DESCRIPTION:代理人、音擎调频：柚叶(支援·物理)，星见雅(
- 异常·烈霜)，狸法七变化(支援)，霰落星殿(异常)
+DTSTART;TZID=Asia/Shanghai:20250903T145900
+UID:ce5aff83@trrw.tech
+DESCRIPTION:代理人、音擎调频：爱丽丝(异常·物理)，月城
+ 柳(异常·电)，十方锻星(异常)，时流贤者(异常)
 LOCATION:绝区零-抽卡
 TRANSP:TRANSPARENT
 END:VEVENT

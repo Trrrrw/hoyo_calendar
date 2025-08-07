@@ -8,13 +8,22 @@
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/a4895425d5285aebf400ca3fe10ecef4_7667341556107359878_transformed.png",
     "ann_type": "版本信息"
   },
-  "918": {
-    "title": "「先遣赏金-定期清剿」活动",
-    "subtitle": "先遣赏金-定期清剿",
+  "933": {
+    "title": "「幽灵船大冒险」活动",
+    "subtitle": "幽灵船大冒险",
     "game": "绝区零",
-    "start_time": "2025-08-01T04:00:00",
-    "end_time": "2025-08-06T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/36d5bc0d3a1a85dc021cf214eb251cc7_8071985790483658632_transformed.jpg",
+    "start_time": "2025-08-06T10:00:00",
+    "end_time": "2025-08-25T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/04/7b619776da5c5bedb4f67075d86abfb2_1753908380220766717_transformed.png",
+    "ann_type": "活动"
+  },
+  "943": {
+    "title": "「『嗯呢』从天降」活动",
+    "subtitle": "『嗯呢』从天降",
+    "game": "绝区零",
+    "start_time": "2025-08-06T10:00:00",
+    "end_time": "2025-09-03T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/31/fb2d0841b8a0d33ab51ce526b9ba058a_4147164035506926952_transformed.png",
     "ann_type": "活动"
   },
   "917": {
@@ -35,13 +44,13 @@
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/3d2719aaa99c56c38ccd37aa67403bde_6891456941692454619_transformed.png",
     "ann_type": "活动"
   },
-  "63": {
-    "title": "代理人、音擎调频：柚叶(支援·物理)，星见雅(异常·烈霜)，狸法七变化(支援)，霰落星殿(异常)",
+  "68": {
+    "title": "代理人、音擎调频：爱丽丝(异常·物理)，月城柳(异常·电)，十方锻星(异常)，时流贤者(异常)",
     "subtitle": "代理人、音擎调频",
     "game": "绝区零",
-    "start_time": "2025-07-16T07:00:00",
-    "end_time": "2025-08-06T11:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/09/d0b68ee523381478fcda6725c3e7ef46_3305645013005673814_transformed.png",
+    "start_time": "2025-08-06T12:00:00",
+    "end_time": "2025-09-03T14:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/aad717741796921d7ebd48ef21cff50f_4321356164073360348_transformed.png",
     "ann_type": "抽卡"
   },
   "66": {
