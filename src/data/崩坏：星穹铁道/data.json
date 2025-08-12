@@ -1,18 +1,18 @@
 {
-  "1023": {
-    "title": "崩坏：星穹铁道 3.4 版本",
-    "subtitle": "崩坏：星穹铁道 3.4 版本",
+  "1055": {
+    "title": "崩坏：星穹铁道 3.5 版本",
+    "subtitle": "崩坏：星穹铁道 3.5 版本",
     "game": "崩坏：星穹铁道",
-    "start_time": "2025-07-02T07:00:00",
-    "end_time": "2025-08-13T06:00:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/01/8b9f7b78ccebe02a0da77e4752f84956_6364192244541358706.png",
+    "start_time": "2025-08-13T06:00:00",
+    "end_time": "2025-09-24T06:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/12/8cf457a3a2648234bdd1e570b9a9e9e9_9092401453382367901_transformed.png",
     "ann_type": "版本信息"
   },
   "1028": {
     "title": "角色、光锥跃迁：「海瑟音（虚无•物理）」，「卡芙卡（虚无•雷）」，「海洋为何而歌（虚无）」，「只需等待（虚无）」",
     "subtitle": "角色、光锥跃迁",
     "game": "崩坏：星穹铁道",
-    "start_time": "2025-07-02T07:00:00",
+    "start_time": "2025-08-13T06:00:00",
     "end_time": "2025-09-02T11:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/a5605c44848ad9fffa44eecf3df8aa60_4607319550659159642_transformed.png",
     "ann_type": "抽卡"
@@ -21,7 +21,7 @@
     "title": "「黄金迷境大饭店」：经营餐馆，获取特定4星光锥及手机壁纸等奖励！",
     "subtitle": "黄金迷境大饭店",
     "game": "崩坏：星穹铁道",
-    "start_time": "2025-07-02T07:00:00",
+    "start_time": "2025-08-13T06:00:00",
     "end_time": "2025-09-22T03:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/a9ead295aba88755e4cb4c9291937c58_2930661736177292916_transformed.png",
     "ann_type": "活动"
