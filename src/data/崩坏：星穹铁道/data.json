@@ -8,6 +8,15 @@
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/12/8cf457a3a2648234bdd1e570b9a9e9e9_9092401453382367901_transformed.png",
     "ann_type": "版本信息"
   },
+  "1031": {
+    "title": "「空间站特派」：完成活动委托获取星琼等奖励",
+    "subtitle": "空间站特派",
+    "game": "崩坏：星穹铁道",
+    "start_time": "2025-08-20T04:00:00",
+    "end_time": "2025-09-01T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/e27045d0d67a17cdc7c9df78668f8f79_3725938989314164086_transformed.png",
+    "ann_type": "活动"
+  },
   "1028": {
     "title": "角色、光锥跃迁：「海瑟音（虚无•物理）」，「卡芙卡（虚无•雷）」，「海洋为何而歌（虚无）」，「只需等待（虚无）」",
     "subtitle": "角色、光锥跃迁",
@@ -24,15 +33,6 @@
     "start_time": "2025-08-13T06:00:00",
     "end_time": "2025-09-22T03:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/a9ead295aba88755e4cb4c9291937c58_2930661736177292916_transformed.png",
-    "ann_type": "活动"
-  },
-  "1031": {
-    "title": "「空间站特派」：完成活动委托获取星琼等奖励",
-    "subtitle": "空间站特派",
-    "game": "崩坏：星穹铁道",
-    "start_time": "2025-08-20T04:00:00",
-    "end_time": "2025-09-01T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/e27045d0d67a17cdc7c9df78668f8f79_3725938989314164086_transformed.png",
     "ann_type": "活动"
   }
 }
