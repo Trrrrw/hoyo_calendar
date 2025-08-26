@@ -1,13 +1,4 @@
 {
-  "1055": {
-    "title": "崩坏：星穹铁道 3.5 版本",
-    "subtitle": "崩坏：星穹铁道 3.5 版本",
-    "game": "崩坏：星穹铁道",
-    "start_time": "2025-08-13T06:00:00",
-    "end_time": "2025-09-24T06:00:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/12/8cf457a3a2648234bdd1e570b9a9e9e9_9092401453382367901_transformed.png",
-    "ann_type": "版本信息"
-  },
   "1034": {
     "title": "「位面分裂」活动：位面饰品限时双倍掉落",
     "subtitle": "位面分裂",
@@ -16,6 +7,15 @@
     "end_time": "2025-09-08T03:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/14/389179af9749f81f57b99100502f2269_5006701421526325316_transformed.png",
     "ann_type": "活动"
+  },
+  "1055": {
+    "title": "崩坏：星穹铁道 3.5 版本",
+    "subtitle": "崩坏：星穹铁道 3.5 版本",
+    "game": "崩坏：星穹铁道",
+    "start_time": "2025-08-13T06:00:00",
+    "end_time": "2025-09-24T06:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/12/8cf457a3a2648234bdd1e570b9a9e9e9_9092401453382367901_transformed.png",
+    "ann_type": "版本信息"
   },
   "1031": {
     "title": "「空间站特派」：完成活动委托获取星琼等奖励",
