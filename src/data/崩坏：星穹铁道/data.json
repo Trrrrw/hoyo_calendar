@@ -17,23 +17,23 @@
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/12/8cf457a3a2648234bdd1e570b9a9e9e9_9092401453382367901_transformed.png",
     "ann_type": "版本信息"
   },
-  "1031": {
-    "title": "「空间站特派」：完成活动委托获取星琼等奖励",
-    "subtitle": "空间站特派",
-    "game": "崩坏：星穹铁道",
-    "start_time": "2025-08-20T04:00:00",
-    "end_time": "2025-09-01T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/e27045d0d67a17cdc7c9df78668f8f79_3725938989314164086_transformed.png",
-    "ann_type": "活动"
-  },
-  "1028": {
-    "title": "角色、光锥跃迁：「海瑟音（虚无•物理）」，「卡芙卡（虚无•雷）」，「海洋为何而歌（虚无）」，「只需等待（虚无）」",
+  "1032": {
+    "title": "角色、光锥跃迁：「刻律德菈（同谐•风）」，「银狼（虚无•量子）」，「金血铭刻的时代（同谐）」，「雨一直下（虚无）」",
     "subtitle": "角色、光锥跃迁",
     "game": "崩坏：星穹铁道",
-    "start_time": "2025-08-13T06:00:00",
-    "end_time": "2025-09-02T11:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/a5605c44848ad9fffa44eecf3df8aa60_4607319550659159642_transformed.png",
+    "start_time": "2025-09-02T12:00:00",
+    "end_time": "2025-09-23T15:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/294b0823b37beebbdc5467a4da678ef3_8346243547230150748_transformed.png",
     "ann_type": "抽卡"
+  },
+  "1027": {
+    "title": "「旧瓶新友」：调制特饮，获得命运的足迹等奖励！",
+    "subtitle": "旧瓶新友",
+    "game": "崩坏：星穹铁道",
+    "start_time": "2025-09-02T12:00:00",
+    "end_time": "2025-09-22T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/16de1d62a82b0afb4bd5a3c3ed4c281c_1928233697870942917_transformed.png",
+    "ann_type": "活动"
   },
   "1029": {
     "title": "「黄金迷境大饭店」：经营餐馆，获取特定4星光锥及手机壁纸等奖励！",

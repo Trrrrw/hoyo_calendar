@@ -1,74 +1,47 @@
 {
-  "931": {
-    "title": "绝区零 2.1 版本",
-    "subtitle": "绝区零 2.1 版本",
+  "944": {
+    "title": "绝区零 2.2 版本",
+    "subtitle": "绝区零 2.2 版本",
     "game": "绝区零",
-    "start_time": "2025-07-16T07:00:00",
-    "end_time": "2025-09-04T06:00:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/a4895425d5285aebf400ca3fe10ecef4_7667341556107359878_transformed.png",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-10-15T07:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/03/fe0cef228ebec38db51f2f9c34387e9d_8137303687655575907_transformed.png",
     "ann_type": "版本信息"
   },
-  "936": {
-    "title": "「数据悬赏-实战模拟」活动",
-    "subtitle": "数据悬赏-实战模拟",
-    "game": "绝区零",
-    "start_time": "2025-08-27T04:00:00",
-    "end_time": "2025-09-01T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/04/ed36a86904409cdec35c58d06d52d6fe_8616797829177245981_transformed.jpg",
-    "ann_type": "活动"
-  },
-  "935": {
-    "title": "「拼出澄辉夏日！」活动",
-    "subtitle": "拼出澄辉夏日！",
-    "game": "绝区零",
-    "start_time": "2025-08-20T10:00:00",
-    "end_time": "2025-09-03T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/04/c1e05058dee138385657090054bafc59_4740672388323307538_transformed.png",
-    "ann_type": "活动"
-  },
-  "943": {
-    "title": "「『嗯呢』从天降」活动",
-    "subtitle": "『嗯呢』从天降",
-    "game": "绝区零",
-    "start_time": "2025-08-06T10:00:00",
-    "end_time": "2025-09-03T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/31/fb2d0841b8a0d33ab51ce526b9ba058a_4147164035506926952_transformed.png",
-    "ann_type": "活动"
-  },
-  "920": {
+  "951": {
     "title": "「全新放送」活动",
     "subtitle": "全新放送",
     "game": "绝区零",
-    "start_time": "2025-07-16T07:00:00",
-    "end_time": "2025-09-03T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/3d2719aaa99c56c38ccd37aa67403bde_6891456941692454619_transformed.png",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-10-14T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/b83159b7bdf9a5adb74f7abb8a940344_1338687569478379340_transformed.png",
     "ann_type": "活动"
   },
-  "68": {
-    "title": "代理人、音擎调频：爱丽丝(异常·物理)，月城柳(异常·电)，十方锻星(异常)，时流贤者(异常)",
+  "78": {
+    "title": "代理人、音擎调频：「席德」(强攻·电)，「扳机」(击破·电)，机巧心种(强攻)，索魂影眸(击破)",
     "subtitle": "代理人、音擎调频",
     "game": "绝区零",
-    "start_time": "2025-08-06T12:00:00",
-    "end_time": "2025-09-03T14:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/aad717741796921d7ebd48ef21cff50f_4321356164073360348_transformed.png",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-09-24T23:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/26/f8fe9d73971e6b43658a0383741fd16a_5930383816391642376_transformed.png",
     "ann_type": "抽卡"
   },
-  "66": {
-    "title": "「『嗯呢』棋闻录」活动",
-    "subtitle": "『嗯呢』棋闻录",
+  "81": {
+    "title": "「奇花异旅」活动与「席德」代理人秘闻说明",
+    "subtitle": "奇花异旅",
     "game": "绝区零",
-    "start_time": "2025-07-28T10:00:00",
-    "end_time": "2025-09-03T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/20cd1c0f5085c76a749c0110fb6faf74_986419481151628055_transformed.png",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-10-13T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/6415ac0d31ca28f22b58739be15c25e3_1404592557699771709_transformed.png",
     "ann_type": "活动"
   },
-  "65": {
-    "title": "「仲夏游梦绮谭」活动",
-    "subtitle": "仲夏游梦绮谭",
+  "79": {
+    "title": "「小邦布勇任防卫军」活动",
+    "subtitle": "小邦布勇任防卫军",
     "game": "绝区零",
-    "start_time": "2025-07-17T10:00:00",
-    "end_time": "2025-09-03T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/ef901b93c9850207ea58e021a6e01f05_5500971947111362911_transformed.png",
+    "start_time": "2025-09-05T10:00:00",
+    "end_time": "2025-10-13T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/b287968a279c07a324830a2bde241b37_62336921007942274_transformed.png",
     "ann_type": "活动"
   }
 }
