@@ -1,65 +1,119 @@
 {
-  "21261": {
-    "title": "原神 5.8 版本",
-    "subtitle": "原神 5.8 版本",
+  "21342": {
+    "title": "原神 「『空月之歌·呈示』雪浪与苍林之舞」 版本",
+    "subtitle": "原神 「『空月之歌·呈示』雪浪与苍林之舞」 版本",
     "game": "原神",
-    "start_time": "2025-07-30T07:00:00",
-    "end_time": "2025-09-10T06:00:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/21/a709b2b7a8a721d498659c3b440cfe5d_30200819525177160.png",
+    "start_time": "2025-09-10T07:00:00",
+    "end_time": "2025-10-22T06:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/09/fca2f57fdb6cdc4309a6ff8c56a5cf85_8535803463244092701_transformed.jpg",
     "ann_type": "版本信息"
-  },
-  "21240": {
-    "title": "「鲨鲨逐浪游」角色祈愿: 玛拉妮",
-    "subtitle": "「鲨鲨逐浪游」角色祈愿: 玛拉妮",
-    "game": "原神",
-    "start_time": "2025-08-19T18:00:00",
-    "end_time": "2025-09-09T14:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/04/dddfcb81c2ad1b66698a185ed54ea740_9023492900661050827_transformed.png",
-    "ann_type": "抽卡"
-  },
-  "21241": {
-    "title": "「饮羽散红」角色祈愿: 恰斯卡",
-    "subtitle": "「饮羽散红」角色祈愿: 恰斯卡",
-    "game": "原神",
-    "start_time": "2025-08-19T18:00:00",
-    "end_time": "2025-09-09T14:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/04/f6150d4f4a1057acf4b1bf4fe8f44278_1741303681223443603_transformed.png",
-    "ann_type": "抽卡"
-  },
-  "21242": {
-    "title": "「神铸赋形」武器祈愿: 冲浪时光, 星鹫赤羽",
-    "subtitle": "「神铸赋形」武器祈愿: 冲浪时光, 星鹫赤羽",
-    "game": "原神",
-    "start_time": "2025-08-19T18:00:00",
-    "end_time": "2025-09-09T14:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/04/0b2b9bec28664316f789674b94b0b235_7693169560165344630_transformed.png",
-    "ann_type": "抽卡"
   },
   "21168": {
     "title": "「幽境危战」活动：紊乱地脉挑战",
     "subtitle": "幽境危战",
     "game": "原神",
-    "start_time": "2025-08-06T10:00:00",
-    "end_time": "2025-09-09T03:59:00",
+    "start_time": "2025-09-17T10:00:00",
+    "end_time": "2025-10-21T03:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/06/04/2eee117712818405c0b96d7736c58e87_3398786332163764636.jpg",
+    "ann_type": "活动"
+  },
+  "21281": {
+    "title": "「叮铃哐啷大作战」活动：参与获取活动专属武器「法器·天光的纺琴」",
+    "subtitle": "叮铃哐啷大作战",
+    "game": "原神",
+    "start_time": "2025-09-12T10:00:00",
+    "end_time": "2025-09-29T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/1d802569953f04d8a6aa92c695d2a7db_8717108177869234235_transformed.png",
+    "ann_type": "活动"
+  },
+  "21276": {
+    "title": "「苍林月祷」角色祈愿: 菈乌玛",
+    "subtitle": "「苍林月祷」角色祈愿: 菈乌玛",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-09-30T17:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/dfe60f1f91faf724678d5ce11abbc900_3362625339017772610_transformed.png",
+    "ann_type": "抽卡"
+  },
+  "21277": {
+    "title": "「月草的赐慧」角色祈愿: 纳西妲",
+    "subtitle": "「月草的赐慧」角色祈愿: 纳西妲",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-09-30T17:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/768b0bb0d9375b070e00ff0f64975984_5124007218747130064_transformed.png",
+    "ann_type": "抽卡"
+  },
+  "21278": {
+    "title": "「神铸赋形」武器祈愿: 纺夜天镜, 千夜浮梦",
+    "subtitle": "「神铸赋形」武器祈愿: 纺夜天镜, 千夜浮梦",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-09-30T17:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/92b3885aac7b10d429c94c7145fd83a2_571272484301319349_transformed.png",
+    "ann_type": "抽卡"
+  },
+  "21279": {
+    "title": "「露草的行盏」集录祈愿",
+    "subtitle": "「露草的行盏」集录祈愿",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-09-30T17:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/350073ccb799ece1f540021a0433f92a_8893688263054963574_transformed.png",
+    "ann_type": "抽卡"
+  },
+  "21325": {
+    "title": "「砺行修远」：勤修馈赠",
+    "subtitle": "砺行修远",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-12-01T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/01/9d9818e0badc0b90e9c6d7e10a9023ce_3429418709384054143_transformed.png",
+    "ann_type": "活动"
+  },
+  "21288": {
+    "title": "「解探月域，琢炼宵晖」活动：自选邀约「奔行世间」常驻祈愿5星角色",
+    "subtitle": "解探月域，琢炼宵晖",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-10-21T14:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/8f57249f8c3ce84106248f8719e75698_8382136198075728804_transformed.png",
+    "ann_type": "活动"
+  },
+  "21280": {
+    "title": "「虹旅藏金·朔望流辉」活动：登录领取1600原石、纠缠之缘*10等奖励",
+    "subtitle": "虹旅藏金·朔望流辉",
+    "game": "原神",
+    "start_time": "2025-09-28T00:00:00",
+    "end_time": "2025-10-01T04:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/17a6e4bb3e127f3e1c753fc57b60a508_270600914888133676_transformed.png",
+    "ann_type": "活动"
+  },
+  "21284": {
+    "title": "「冷月逸照的乐屿」时限内完成探索任务，可额外获得原石*400奖励",
+    "subtitle": "冷月逸照的乐屿",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-12-02T14:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/a2ae314f760bb0b5de76de4a097ee19e_5468588135090445069_transformed.png",
+    "ann_type": "活动"
+  },
+  "21285": {
+    "title": "「相遇·漫漫旅途之忆」：千音雅集更新",
+    "subtitle": "相遇·漫漫旅途之忆",
+    "game": "原神",
+    "start_time": "2025-10-22T07:00:00",
+    "end_time": "2025-10-21T14:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/f197aaf3b6c3117a14273f936614a045_1533098169447112601_transformed.png",
     "ann_type": "活动"
   },
   "21234": {
     "title": "「悠悠纳塔，悠悠夏天！」时限内完成探索任务，可额外获得原石*400奖励",
     "subtitle": "悠悠纳塔，悠悠夏天！",
     "game": "原神",
-    "start_time": "2025-07-30T07:00:00",
+    "start_time": "2025-10-22T07:00:00",
     "end_time": "2025-10-21T14:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/18/2bbe1d2c4a7a877af33b71afa3a0f230_5476653299764691825.png",
-    "ann_type": "活动"
-  },
-  "21238": {
-    "title": "「纳塔·流火陨坠之野」：千音雅集更新",
-    "subtitle": "纳塔·流火陨坠之野",
-    "game": "原神",
-    "start_time": "2025-07-30T07:00:00",
-    "end_time": "2025-09-09T14:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/18/4e8c199304e5e619628bb70e12228adf_684938475469559603.png",
     "ann_type": "活动"
   }
 }
