@@ -1,13 +1,4 @@
 {
-  "954": {
-    "title": "「先遣赏金-定期清剿」活动",
-    "subtitle": "先遣赏金-定期清剿",
-    "game": "绝区零",
-    "start_time": "2025-09-18T04:00:00",
-    "end_time": "2025-09-23T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/26/36d5bc0d3a1a85dc021cf214eb251cc7_8309948020105692421_transformed.jpg",
-    "ann_type": "活动"
-  },
   "944": {
     "title": "绝区零 2.2 版本",
     "subtitle": "绝区零 2.2 版本",
@@ -42,6 +33,15 @@
     "start_time": "2025-09-04T07:00:00",
     "end_time": "2025-10-14T03:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/b83159b7bdf9a5adb74f7abb8a940344_1338687569478379340_transformed.png",
+    "ann_type": "活动"
+  },
+  "954": {
+    "title": "「先遣赏金-定期清剿」活动",
+    "subtitle": "先遣赏金-定期清剿",
+    "game": "绝区零",
+    "start_time": "2025-09-18T04:00:00",
+    "end_time": "2025-09-23T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/26/36d5bc0d3a1a85dc021cf214eb251cc7_8309948020105692421_transformed.jpg",
     "ann_type": "活动"
   },
   "78": {
