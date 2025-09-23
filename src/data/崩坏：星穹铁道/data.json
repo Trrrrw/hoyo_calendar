@@ -1,18 +1,9 @@
 {
-  "1055": {
-    "title": "崩坏：星穹铁道 3.5 版本",
-    "subtitle": "崩坏：星穹铁道 3.5 版本",
-    "game": "崩坏：星穹铁道",
-    "start_time": "2025-08-13T06:00:00",
-    "end_time": "2025-09-24T06:00:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/12/8cf457a3a2648234bdd1e570b9a9e9e9_9092401453382367901_transformed.png",
-    "ann_type": "版本信息"
-  },
   "1059": {
     "title": "角色、光锥跃迁：「长夜月（记忆•冰）」，「大黑塔（智识•冰）」，「致长夜的星光（记忆）」，「向着不可追问处（智识）」",
     "subtitle": "角色、光锥跃迁",
     "game": "崩坏：星穹铁道",
-    "start_time": "2025-08-13T06:00:00",
+    "start_time": "1970-01-01T08:00:00",
     "end_time": "2025-10-15T11:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/04/d16f35968a588f6e394d32f3f6c29665_4017322493394058472_transformed.png",
     "ann_type": "抽卡"
@@ -21,7 +12,7 @@
     "title": "「天气真好，养它！」：培养大地兽宝宝，获取自塑尘脂、头像等奖励！",
     "subtitle": "天气真好，养它！",
     "game": "崩坏：星穹铁道",
-    "start_time": "2025-08-13T06:00:00",
+    "start_time": "1970-01-01T08:00:00",
     "end_time": "2025-11-03T03:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/15/fea3d0fce682f14718cb7bbc26996fbb_8892339838865834237_transformed.png",
     "ann_type": "活动"
