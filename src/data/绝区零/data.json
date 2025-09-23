@@ -8,6 +8,24 @@
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/03/fe0cef228ebec38db51f2f9c34387e9d_8137303687655575907_transformed.png",
     "ann_type": "版本信息"
   },
+  "963": {
+    "title": "「问题士兵补习班」活动",
+    "subtitle": "问题士兵补习班",
+    "game": "绝区零",
+    "start_time": "2025-09-24T10:00:00",
+    "end_time": "2025-10-09T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/11/e3c54420c803d1d0eb9979ba499137b1_7249506364554315502_transformed.png",
+    "ann_type": "活动"
+  },
+  "966": {
+    "title": "「『嗯呢』从天降」活动",
+    "subtitle": "『嗯呢』从天降",
+    "game": "绝区零",
+    "start_time": "2025-09-24T10:00:00",
+    "end_time": "2025-10-14T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/11/a80aa81cb93be1004d55b029b75bbb1f_2368291966728837633_transformed.png",
+    "ann_type": "活动"
+  },
   "953": {
     "title": "「激战聚光决胜」活动",
     "subtitle": "激战聚光决胜",
@@ -35,21 +53,21 @@
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/b83159b7bdf9a5adb74f7abb8a940344_1338687569478379340_transformed.png",
     "ann_type": "活动"
   },
-  "954": {
-    "title": "「先遣赏金-定期清剿」活动",
-    "subtitle": "先遣赏金-定期清剿",
+  "83": {
+    "title": "代理人、音擎调频：奥菲丝 &「鬼火」(强攻·火)，伊芙琳(强攻·火)，嚣枪喧焰(强攻)，心弦夜响(强攻)",
+    "subtitle": "代理人、音擎调频",
     "game": "绝区零",
-    "start_time": "2025-09-18T04:00:00",
-    "end_time": "2025-09-23T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/26/36d5bc0d3a1a85dc021cf214eb251cc7_8309948020105692421_transformed.jpg",
-    "ann_type": "活动"
+    "start_time": "2025-09-24T12:00:00",
+    "end_time": "2025-10-14T14:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/11/8fdc3c3bbd8b0795976233335a54cf79_864659035321900473_transformed.png",
+    "ann_type": "抽卡"
   },
   "78": {
     "title": "代理人、音擎调频：「席德」(强攻·电)，「扳机」(击破·电)，机巧心种(强攻)，索魂影眸(击破)",
     "subtitle": "代理人、音擎调频",
     "game": "绝区零",
     "start_time": "2025-09-04T07:00:00",
-    "end_time": "2025-09-24T23:59:00",
+    "end_time": "2025-09-24T11:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/26/f8fe9d73971e6b43658a0383741fd16a_5930383816391642376_transformed.png",
     "ann_type": "抽卡"
   },
