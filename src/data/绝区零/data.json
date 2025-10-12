@@ -17,24 +17,6 @@
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/11/ed36a86904409cdec35c58d06d52d6fe_7371163614112200346_transformed.jpg",
     "ann_type": "活动"
   },
-  "964": {
-    "title": "「音跃狂潮」活动",
-    "subtitle": "音跃狂潮",
-    "game": "绝区零",
-    "start_time": "2025-09-29T10:00:00",
-    "end_time": "2025-10-13T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/11/1f502a6a80ec9aa855e7a6743f9387f1_603900241409455288_transformed.png",
-    "ann_type": "活动"
-  },
-  "965": {
-    "title": "「『嗯呢』大寻宝」活动",
-    "subtitle": "『嗯呢』大寻宝",
-    "game": "绝区零",
-    "start_time": "2025-10-04T10:00:00",
-    "end_time": "2025-10-13T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/11/fc89d65573efb10863abc6635ac5409d_2233173788164667504_transformed.png",
-    "ann_type": "活动"
-  },
   "966": {
     "title": "「『嗯呢』从天降」活动",
     "subtitle": "『嗯呢』从天降",
@@ -78,24 +60,6 @@
     "start_time": "2025-09-29T10:00:00",
     "end_time": "2025-10-14T03:59:00",
     "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/23/e98c451b1125b11d562981da9f577693_7985571177172897309_transformed.jpg",
-    "ann_type": "活动"
-  },
-  "81": {
-    "title": "「奇花异旅」活动与「席德」代理人秘闻说明",
-    "subtitle": "奇花异旅",
-    "game": "绝区零",
-    "start_time": "2025-09-04T07:00:00",
-    "end_time": "2025-10-13T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/6415ac0d31ca28f22b58739be15c25e3_1404592557699771709_transformed.png",
-    "ann_type": "活动"
-  },
-  "79": {
-    "title": "「小邦布勇任防卫军」活动",
-    "subtitle": "小邦布勇任防卫军",
-    "game": "绝区零",
-    "start_time": "2025-09-05T10:00:00",
-    "end_time": "2025-10-13T03:59:00",
-    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/28/b287968a279c07a324830a2bde241b37_62336921007942274_transformed.png",
     "ann_type": "活动"
   }
 }
