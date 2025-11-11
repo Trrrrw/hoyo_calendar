@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Trrrrw/hoyo_calendar//GitHub/CN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+SUMMARY:角色、光锥跃迁
+DTSTART;TZID=Asia/Shanghai:20250723T120000
+DTEND;TZID=Asia/Shanghai:20250812T150000
+UID:20f2fadf@trrw.tech
+DESCRIPTION:角色、光锥跃迁：「流萤（毁灭•火）」，「
+ 镜流（毁灭•冰）」，「刃（毁灭•风）」，「梦应归
+ 于何处（毁灭）」，「此身为剑（毁灭）」，「到不了
+ 的彼岸（毁灭）」
+LOCATION:崩坏：星穹铁道-抽卡
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,56 @@
+{
+  "944": {
+    "title": "绝区零 2.2 版本",
+    "subtitle": "绝区零 2.2 版本",
+    "game": "绝区零",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-10-15T07:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/03/fe0cef228ebec38db51f2f9c34387e9d_8137303687655575907_transformed.png",
+    "ann_type": "版本信息"
+  },
+  "975": {
+    "title": "「全新放送」活动",
+    "subtitle": "全新放送",
+    "game": "绝区零",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-11-25T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/13/df2464cec02b3be48e63ae404ecd7db8_1157057133887522249_transformed.png",
+    "ann_type": "活动"
+  },
+  "976": {
+    "title": "「昔丘探索手册」活动",
+    "subtitle": "昔丘探索手册",
+    "game": "绝区零",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-11-26T05:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/13/18480e66e870023b427cf9c1bd2c53c7_5108851586410885604_transformed.png",
+    "ann_type": "活动"
+  },
+  "89": {
+    "title": "代理人、音擎调频：卢西娅(支援·以太)，薇薇安(异常·以太)，铸梦炉歌(支援)，飞鸟星梦(异常)",
+    "subtitle": "代理人、音擎调频",
+    "game": "绝区零",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-11-05T11:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/09/29/6db075d1359214cd6f8769d85e2a1b1d_4097839913712818073_transformed.jpg",
+    "ann_type": "抽卡"
+  },
+  "91": {
+    "title": "「调频回馈」活动",
+    "subtitle": "调频回馈",
+    "game": "绝区零",
+    "start_time": "2025-10-13T18:00:00",
+    "end_time": "2025-12-30T05:59:59",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/13/9c40f2baa259bb7359875e2baa00f249_5162586354946785824_transformed.png",
+    "ann_type": "活动"
+  },
+  "92": {
+    "title": "「倒悬的守夜灯」活动与「失梦者奇谭」代理人秘闻说明",
+    "subtitle": "倒悬的守夜灯",
+    "game": "绝区零",
+    "start_time": "2025-09-04T07:00:00",
+    "end_time": "2025-11-24T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/10/13/2883bd98f948911935611b1df627f7b6_2247634704661688623_transformed.png",
+    "ann_type": "活动"
+  }
+}

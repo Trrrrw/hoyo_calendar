@@ -1,0 +1,74 @@
+{
+  "931": {
+    "title": "绝区零 2.1 版本",
+    "subtitle": "绝区零 2.1 版本",
+    "game": "绝区零",
+    "start_time": "2025-07-16T07:00:00",
+    "end_time": "2025-09-04T06:00:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/a4895425d5285aebf400ca3fe10ecef4_7667341556107359878_transformed.png",
+    "ann_type": "版本信息"
+  },
+  "933": {
+    "title": "「幽灵船大冒险」活动",
+    "subtitle": "幽灵船大冒险",
+    "game": "绝区零",
+    "start_time": "2025-08-06T10:00:00",
+    "end_time": "2025-08-25T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/08/04/7b619776da5c5bedb4f67075d86abfb2_1753908380220766717_transformed.png",
+    "ann_type": "活动"
+  },
+  "943": {
+    "title": "「『嗯呢』从天降」活动",
+    "subtitle": "『嗯呢』从天降",
+    "game": "绝区零",
+    "start_time": "2025-08-06T10:00:00",
+    "end_time": "2025-09-03T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/31/fb2d0841b8a0d33ab51ce526b9ba058a_4147164035506926952_transformed.png",
+    "ann_type": "活动"
+  },
+  "917": {
+    "title": "「最靓鱼档传说」活动",
+    "subtitle": "最靓鱼档传说",
+    "game": "绝区零",
+    "start_time": "2025-07-22T10:00:00",
+    "end_time": "2025-08-11T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/18/39ae22cea3d9c2e575960ebb429f1804_8399414283420387326_transformed.png",
+    "ann_type": "活动"
+  },
+  "920": {
+    "title": "「全新放送」活动",
+    "subtitle": "全新放送",
+    "game": "绝区零",
+    "start_time": "2025-07-16T07:00:00",
+    "end_time": "2025-09-03T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/3d2719aaa99c56c38ccd37aa67403bde_6891456941692454619_transformed.png",
+    "ann_type": "活动"
+  },
+  "68": {
+    "title": "代理人、音擎调频：爱丽丝(异常·物理)，月城柳(异常·电)，十方锻星(异常)，时流贤者(异常)",
+    "subtitle": "代理人、音擎调频",
+    "game": "绝区零",
+    "start_time": "2025-08-06T12:00:00",
+    "end_time": "2025-09-03T14:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/22/aad717741796921d7ebd48ef21cff50f_4321356164073360348_transformed.png",
+    "ann_type": "抽卡"
+  },
+  "66": {
+    "title": "「『嗯呢』棋闻录」活动",
+    "subtitle": "『嗯呢』棋闻录",
+    "game": "绝区零",
+    "start_time": "2025-07-28T10:00:00",
+    "end_time": "2025-09-03T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/20cd1c0f5085c76a749c0110fb6faf74_986419481151628055_transformed.png",
+    "ann_type": "活动"
+  },
+  "65": {
+    "title": "「仲夏游梦绮谭」活动",
+    "subtitle": "仲夏游梦绮谭",
+    "game": "绝区零",
+    "start_time": "2025-07-17T10:00:00",
+    "end_time": "2025-09-03T03:59:00",
+    "banner": "https://sdk-webstatic.mihoyo.com/upload/ann/2025/07/11/ef901b93c9850207ea58e021a6e01f05_5500971947111362911_transformed.png",
+    "ann_type": "活动"
+  }
+}
