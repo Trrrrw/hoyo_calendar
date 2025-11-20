@@ -6,10 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13.9"
 dependencies = [
     "apscheduler>=3.11.1",
-    "fastapi>=0.121.3",
     "httpx>=0.28.1",
     "loguru>=0.7.3",
     "lxml>=6.0.2",
     "pydantic>=2.12.4",
-    "uvicorn>=0.38.0",
 ]

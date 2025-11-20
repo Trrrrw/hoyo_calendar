@@ -69,3 +69,4 @@ def run_all_pipelines():
                 logger.success(f"任务完成：{game}")
             except Exception as e:
                 logger.exception(f"任务失败：{game} — {e}")
+            logger.opt(raw=True).info("\n")

@@ -50,6 +50,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command_timeout: 40m
           script: |
             docker pull ghcr.io/trrrrw/hoyo-calendar-backend:latest
             docker stop hoyo-calendar-backend || true

@@ -5,7 +5,6 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 from src.utils import setup_logger
 from src.core import run_all_pipelines
-from src.server import HTTPServer
 
 
 def start_scheduler():
@@ -16,20 +15,12 @@ def start_scheduler():
     return scheduler
 
 
-def start_http_server():
-    server = HTTPServer(host="0.0.0.0")
-    t = threading.Thread(target=server.start, daemon=True)
-    t.start()
-    return server
-
-
 if __name__ == "__main__":
     setup_logger()
 
-    http_server = start_http_server()
     scheduler = start_scheduler()
-
     logger.opt(raw=True).info("\n")
+
     threading.Thread(target=run_all_pipelines, daemon=True).start()
 
     try:
@@ -39,5 +30,4 @@ if __name__ == "__main__":
         logger.opt(raw=True).info("\n")
         logger.info("正在关闭...")
         scheduler.shutdown()
-        http_server.stop()
         logger.info("已退出")
