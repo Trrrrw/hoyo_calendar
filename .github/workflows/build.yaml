@@ -35,7 +35,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/hoyo-calendar-backend:latest
+          tags: ghcr.io/trrrrw/hoyo-calendar-backend:latest
 
   deploy:
     needs: build
@@ -51,7 +51,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            docker pull ghcr.io/${{ github.repository_owner }}/hoyo-calendar-backend:latest
+            docker pull ghcr.io/trrrrw/hoyo-calendar-backend:latest
             docker stop hoyo-calendar-backend || true
             docker rm hoyo-calendar-backend || true
             docker run -d \
@@ -60,5 +60,5 @@ jobs:
               -p 7654:8888 \
               -v /root/Trrrrw/api/data/hoyo_calendar:/app/exports \
               -e SENDKEY=${{ secrets.SENDKEY }} \
-              ghcr.io/${{ github.repository_owner }}/hoyo-calendar-backend:latest
+              ghcr.io/trrrrw/hoyo-calendar-backend:latest
             docker image prune -af || true
