@@ -8,7 +8,7 @@ on:
       - 'uv.lock'
       - 'main.py'
       - 'src/**'
-      - '.github/workflows/build.yml'
+      - '.github/workflows/build.yaml'
   pull_request:
     paths:
     - 'Dockerfile'
