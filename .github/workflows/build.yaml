@@ -1,0 +1,64 @@
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Dockerfile'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - 'main.py'
+      - 'src/**'
+      - '.github/workflows/build.yml'
+  pull_request:
+    paths:
+    - 'Dockerfile'
+    - 'pyproject.toml'
+    - 'uv.lock'
+    - 'main.py'
+    - 'src/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/hoyo-calendar-backend:latest
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_IP }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            docker pull ghcr.io/${{ github.repository_owner }}/hoyo-calendar-backend:latest
+            docker stop hoyo-calendar-backend || true
+            docker rm hoyo-calendar-backend || true
+            docker run -d \
+              --name hoyo-calendar-backend \
+              --restart unless-stopped \
+              -p 7654:8888 \
+              -v /root/Trrrrw/api/data/hoyo_calendar:/app/exports \
+              -e SENDKEY=${{ secrets.SENDKEY }} \
+              ghcr.io/${{ github.repository_owner }}/hoyo-calendar-backend:latest
+            docker image prune -af || true

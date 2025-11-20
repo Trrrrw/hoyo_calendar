@@ -1,6 +1,6 @@
 # 🗓️ 米哈游游戏日历订阅
 
-![Banner Image](./assets/img/banner.webp)
+![Banner Image](https://raw.githubusercontent.com/Trrrrw/hoyo_calendar/refs/heads/gh-pages/assets/img/banner.webp)
 
 ✨ 自动同步《原神》《星穹铁道》《绝区零》的官方活动日程到您的日历应用
 
@@ -69,8 +69,8 @@ yarn dev
 ## 📱 效果预览
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="./assets/img/hoyo_calendar_00.avif" alt="日历效果示例1" width="48%">
-  <img src="./assets/img/hoyo_calendar_01.avif" alt="日历效果示例2" width="48%">
+  <img src="https://raw.githubusercontent.com/Trrrrw/hoyo_calendar/refs/heads/gh-pages/assets/img/hoyo_calendar_00.avif" alt="日历效果示例1" width="48%">
+  <img src="https://raw.githubusercontent.com/Trrrrw/hoyo_calendar/refs/heads/gh-pages/assets/img/hoyo_calendar_01.avif" alt="日历效果示例2" width="48%">
 </div>
 
 ---
