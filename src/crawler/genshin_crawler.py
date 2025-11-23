@@ -1,8 +1,8 @@
-from httpx import Client
 from lxml import html
 from loguru import logger
 
 from src.crawler.base_crawler import BaseCrawler
+from src.services import MyClient
 
 QUERY = "[[分类:活动]]|?开始时间|?结束时间|?类型|?活动描述|?官方公告链接|?所属版本|?地区|template=活动一览/行|sort=开始时间|order=desc|limit=500|offset=0|headers=hide|searchlabel=|format=template|link=none"
 
@@ -20,9 +20,8 @@ class GenshinCrawler(BaseCrawler):
             "query": QUERY,
             "format": "json",
         }
-        with Client(timeout=30.0) as client:
+        with MyClient() as client:
             resp = client.get(url=url, params=params)
-            resp.raise_for_status()
             data = resp.json()
 
         # [DEBUG]
@@ -64,9 +63,8 @@ class GenshinCrawler(BaseCrawler):
             "contentmodel": "wikitext",
             "text": text,
         }
-        with Client() as client:
+        with MyClient() as client:
             resp = client.get(url=url, params=params)
-            resp.raise_for_status()
             data = resp.json()
 
         # [DEBUG]

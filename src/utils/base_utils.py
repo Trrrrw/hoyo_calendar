@@ -1,7 +1,8 @@
 import os
 import re
-from httpx import Client
 from loguru import logger
+
+from src.services import MyClient
 
 
 def clean_string(s: str) -> str:
@@ -40,7 +41,7 @@ def sc_send(title, desp="", options=None) -> dict:
         url = f"https://sctapi.ftqq.com/{sendkey}.send"
     params = {"title": title, "desp": desp, **options}
     headers = {"Content-Type": "application/json;charset=utf-8"}
-    with Client(headers=headers) as client:
+    with MyClient().override(headers=headers) as client:
         response = client.post(url, json=params)
         result = response.json()
     if result.get("data", {}).get("error", "") == "SUCCESS":

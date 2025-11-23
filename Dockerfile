@@ -15,7 +15,6 @@ ENV PYTHONUNBUFFERED=1
 ENV TZ=Asia/Shanghai
 ENV SENDKEY=""
 
-EXPOSE 8888
 VOLUME ["/app/exports"]
 
 CMD ["/root/.local/bin/uv", "run", "/app/main.py"]

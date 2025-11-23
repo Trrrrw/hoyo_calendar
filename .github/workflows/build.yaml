@@ -58,7 +58,6 @@ jobs:
             docker run -d \
               --name hoyo-calendar-backend \
               --restart unless-stopped \
-              -p 7654:8888 \
               -v /root/Trrrrw/api/data/hoyo_calendar:/app/exports \
               -e SENDKEY=${{ secrets.SENDKEY }} \
               ghcr.io/trrrrw/hoyo-calendar-backend:latest
