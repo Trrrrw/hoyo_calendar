@@ -9,6 +9,7 @@ class Notice(BaseModel):
     cover: str
     start: datetime
     end: datetime
+    type: str
     tag: list[str]
     official: str
     version: list[str]

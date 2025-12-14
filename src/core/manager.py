@@ -30,15 +30,15 @@ def run_pipeline(game: str, output_dir: Path, export_formats: list[str]) -> None
 
     for fmt in export_formats:
         exporter = get_exporter(fmt)
-        filename = Path(output_dir) / f"{game}_calendar.{fmt}"
-        exporter.export(notices, filename)
+        folder = output_dir / game
+        exporter.export(notices, folder)
 
 
 def run_all_pipelines():
-    print(f"{'-' * 25}{datetime.now()}{'-' * 25}")
+    logger.opt(raw=True).info(f"{'-' * 25}{datetime.now()}{'-' * 25}\n")
     games = get_all_games()
     if not games:
-        logger.warning("没有找到游戏，请仔细阅读文档说明，如有问题请在issues中提出")
+        logger.warning("没有找到游戏，crawler 和 parser 缺一不可")
         return
 
     # 自动发现所有导出器
@@ -51,11 +51,6 @@ def run_all_pipelines():
     logger.info(f"导出文件类型: {export_formats}")
     logger.opt(raw=True).info("\n")
 
-    # for game in games:
-    #     try:
-    #         run_pipeline(game, DEFAULT_OUTPUT_DIR, export_formats)
-    #     except Exception as e:
-    #         logger.exception(f"任务运行失败 {game}: {e}")
     max_workers = min(8, len(games))
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
@@ -70,7 +65,7 @@ def run_all_pipelines():
             try:
                 future.result()
                 logger.success(f"任务完成：{game}")
-                print(f"{'-' * 25}{datetime.now()}{'-' * 25}")
             except Exception as e:
                 logger.exception(f"任务失败：{game} — {e}")
+            logger.opt(raw=True).info(f"{'-' * 25}{datetime.now()}{'-' * 25}\n")
             logger.opt(raw=True).info("\n")

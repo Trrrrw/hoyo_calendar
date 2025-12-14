@@ -24,6 +24,7 @@ class GenshinParser(BaseParser):
                 cover=self.parse_cover(value),
                 start=self.parse_start(value),
                 end=self.parse_end(value),
+                type="活动",
                 tag=self.parse_tag(value),
                 official=self.parse_official(value),
                 version=self.parse_version(value),
