@@ -1,20 +1,17 @@
-FROM python:3.13.9-alpine AS runtime
+FROM ghcr.io/astral-sh/uv:python3.13-alpine AS runtime
 LABEL authors="Trrrrw"
 
-WORKDIR /app
+WORKDIR /src
 
-RUN apk add --no-cache curl tzdata
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+COPY pyproject.toml uv.lock /src/
+COPY app /src/app/
 
-COPY pyproject.toml uv.lock main.py /app/
-COPY src /app/src/
-
-RUN ~/.local/bin/uv sync --frozen
+RUN uv sync --frozen
 
 ENV PYTHONUNBUFFERED=1
 ENV TZ=Asia/Shanghai
-ENV SENDKEY=""
+ENV output_folder="/src/release"
 
-VOLUME ["/app/exports"]
+VOLUME ["/src/release"]
 
-CMD ["/root/.local/bin/uv", "run", "/app/main.py"]
+CMD ["uv", "run", "--env-file=.env", "-m", "app.main"]

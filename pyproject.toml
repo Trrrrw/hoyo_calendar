@@ -3,13 +3,20 @@ name = "hoyo-calendar"
 version = "0.1.0"
 description = "自动同步《原神》《星穹铁道》《绝区零》的官方活动日程到您的日历应用"
 readme = "README.md"
-requires-python = ">=3.13.9"
+requires-python = ">=3.13.11"
 dependencies = [
     "apscheduler>=3.11.1",
+    "beautifulsoup4>=4.14.3",
     "httpx>=0.28.1",
     "icalendar>=6.3.2",
     "loguru>=0.7.3",
     "lxml>=6.0.2",
+    "mwclient>=0.11.0",
     "pydantic>=2.12.4",
+    "pydantic-settings>=2.12.0",
     "pytz>=2025.2",
 ]
+
+[[tool.uv.index]]
+url="https://mirrors.aliyun.com/pypi/simple"
+default=true

@@ -1,0 +1,5 @@
+services:
+  hoyo-calendar:
+    image: hoyo-calendar:latest
+    container_name: hoyo-calendar
+    restart: always

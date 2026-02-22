@@ -6,16 +6,14 @@ on:
       - 'Dockerfile'
       - 'pyproject.toml'
       - 'uv.lock'
-      - 'main.py'
-      - 'src/**'
+      - 'app/**'
       - '.github/workflows/build.yaml'
   pull_request:
     paths:
     - 'Dockerfile'
     - 'pyproject.toml'
     - 'uv.lock'
-    - 'main.py'
-    - 'src/**'
+    - 'app/**'
 
 jobs:
   build:
@@ -58,7 +56,7 @@ jobs:
             docker run -d \
               --name hoyo-calendar-backend \
               --restart unless-stopped \
-              -v /root/Trrrrw/api/data/hoyo_calendar:/app/exports \
+              -v /root/Trrrrw/api/data/hoyo_calendar:/src/release \
               -e SENDKEY=${{ secrets.SENDKEY }} \
               ghcr.io/trrrrw/hoyo-calendar-backend:latest
             docker image prune -af || true

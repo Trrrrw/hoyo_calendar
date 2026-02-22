@@ -1,26 +1,10 @@
 import os
 import re
-from loguru import logger
 
-from src.services import MyClient
+from app.utils.logger import get_logger
+from app.services.http_client import MyClient
 
-
-def clean_string(s: str) -> str:
-    """清理换行符"""
-    return s.replace("<br>", "").replace("\n", "")
-
-
-def clean_bwiki_cover(url: str) -> str:
-    """清理bwiki封面链接"""
-    pattern = re.compile(
-        r"^(https://patchwiki\.biligame\.com/images/ys)/thumb/([^/]+)/([^/]+)/([^/]+\.(?:png|jpg|jpeg|gif))(?:/.*)?$",
-        re.IGNORECASE,
-    )
-    m = pattern.match(url)
-    if not m:
-        return url
-    base, dir1, dir2, filename = m.groups()
-    return f"{base}/{dir1}/{dir2}/{filename}"
+logger = get_logger("PUSH")
 
 
 def sc_send(title, desp="", options=None) -> dict:
@@ -41,9 +25,9 @@ def sc_send(title, desp="", options=None) -> dict:
         url = f"https://sctapi.ftqq.com/{sendkey}.send"
     params = {"title": title, "desp": desp, **options}
     headers = {"Content-Type": "application/json;charset=utf-8"}
-    with MyClient().override(headers=headers) as client:
-        response = client.post(url, json=params)
-        result = response.json()
+    client = MyClient().override(headers=headers)
+    response = client.post(url, json=params)
+    result = response.json()
     if result.get("data", {}).get("error", "") == "SUCCESS":
         logger.success("消息发送成功")
     else:
