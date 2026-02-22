@@ -14,4 +14,4 @@ ENV output_folder="/src/release"
 
 VOLUME ["/src/release"]
 
-CMD ["uv", "run", "--env-file=.env", "-m", "app.main"]
+CMD ["uv", "run", "-m", "app.main"]

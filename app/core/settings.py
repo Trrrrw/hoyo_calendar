@@ -14,7 +14,7 @@ class ProjectSettings(BaseSettings):
 
     debug: bool = Field(default=False, description="调试模式")
     log_level: str = Field(default="INFO", description="日志级别")
-    output_folder: str = Field(default="./release", description="输出文件夹")
+    output_folder: str = Field(default=".temp/release", description="输出文件夹")
 
 
 settings = ProjectSettings()

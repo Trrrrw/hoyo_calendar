@@ -1,5 +1,7 @@
 services:
   hoyo-calendar:
-    image: hoyo-calendar:latest
-    container_name: hoyo-calendar
+    image: 1w32yhttyayqam-ghcr.xuanyuan.run/trrrrw/hoyo-calendar-backend:latest
+    container_name: hoyo-calendar-backend
     restart: always
+    volumes:
+      - /vol1/1000/DockerAppData/hoyo-calendar:/src/release
