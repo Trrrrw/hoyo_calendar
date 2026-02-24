@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/:default*",
+      "mountPath": "/api",
+      "method": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "PATCH",
+        "HEAD",
+        "OPTIONS"
+      ],
+      "module": [
+        "edge-functions/api/[[default]].ts:onRequest"
+      ]
+    }
+  ],
+  "middleware": null
+}
