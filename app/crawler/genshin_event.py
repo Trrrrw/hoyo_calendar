@@ -35,6 +35,8 @@ class GenshinEvent(BaseCrawler):
                     continue
                 tags = result.printouts["类型"].copy()
                 tags.extend(result.printouts["所属版本"])
+                if "永久活动" in tags:
+                    continue
                 notices.append(
                     Event(
                         id=self.generate_id(result.printouts["名称"][0]),
