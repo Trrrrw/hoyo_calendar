@@ -44,7 +44,8 @@ onMounted(async () => {
               <a-list-item v-for="data_type in game.data_types">
                 <a-list-item-meta :title="data_type"></a-list-item-meta>
                 <template #actions>
-                  <a-button :icon="h(CopyOutlined)" @click="(event) => handleClick(event, game.name, data_type)" />
+                  <a-button :icon="h(CopyOutlined)"
+                    @click="(event: MouseEvent) => handleClick(event, game.name, data_type)" />
                 </template>
               </a-list-item>
             </a-list>
