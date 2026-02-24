@@ -158,8 +158,7 @@
           if(!matchedFunc && /^\/api\/(.+?)$/.test(urlInfo.pathname)) {
             routeParams = {"id":"default","mode":2,"left":"/api/"};
             matchedFunc = true;
-            "use strict";
-(() => {
+            (() => {
   // edge-functions/api/[[default]].ts
   async function onRequest(context) {
     if (context.request.url.endsWith(".ics")) {
@@ -191,24 +190,34 @@
     try {
       const url = new URL(context.request.url);
       const pathParts = url.pathname.split("/").filter((p) => p);
-      const game = pathParts[1];
-      const dataTypeRaw = pathParts[2];
-      if (!game || !dataTypeRaw) {
-        return new Response("game and data_type are required", { status: 400 });
+      if (pathParts.length < 3) {
+        return new Response("Invalid Path", { status: 400 });
       }
+      const game = decodeURIComponent(pathParts[1]);
+      const dataTypeRaw = decodeURIComponent(pathParts[2]);
       const data_type = dataTypeRaw.replace(".ics", "");
-      const targetUrl = `https://api.trrw.tech/hoyo_calendar/ics?game=${game}&data_type=${data_type}`;
-      const proxyRequest = new Request(targetUrl, {
-        method: context.request.method,
-        headers: context.request.headers,
-        body: ["GET", "HEAD"].includes(context.request.method) ? void 0 : context.request.body
+      const targetUrl = new URL("https://api.trrw.tech/hoyo_calendar/ics");
+      targetUrl.searchParams.set("game", game);
+      targetUrl.searchParams.set("data_type", data_type);
+      console.log("Target URL:", targetUrl.toString());
+      const proxyRequest = new Request(targetUrl.toString(), {
+        method: "GET",
+        headers: {
+          "Host": "api.trrw.tech",
+          "User-Agent": context.request.headers.get("User-Agent") || "EdgeOne-Function",
+          "Accept": "*/*"
+        }
       });
       const response = await fetch(proxyRequest);
       const newHeaders = new Headers(response.headers);
+      newHeaders.set("Content-Type", "text/calendar; charset=utf-8");
+      const fileName = `${game}${data_type}\u65E5\u5386.ics`;
+      const encodedFileName = encodeURIComponent(fileName);
+      newHeaders.set("Content-Disposition", `attachment; filename="${encodedFileName}"; filename*=UTF-8''${encodedFileName}`);
       if (response.status === 200) {
-        newHeaders.set("Cache-Control", "public, max-age=3600, s-maxage=3600");
-        newHeaders.delete("Pragma");
-        newHeaders.delete("Expires");
+        newHeaders.set("Cache-Control", "public, max-age=3600");
+      } else {
+        console.error("Backend returned error:", response.status);
       }
       newHeaders.delete("Content-Length");
       return new Response(response.body, {
@@ -218,7 +227,7 @@
       });
     } catch (error) {
       console.error("ICS proxy error:", error);
-      return new Response("Internal Server Error", { status: 502 });
+      return new Response(`Internal Error: ${error.message}`, { status: 502 });
     }
   }
 

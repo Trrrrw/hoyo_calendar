@@ -41,42 +41,67 @@ async function handleIcsRequest(context: RequestContext): Promise<Response> {
     try {
         const url = new URL(context.request.url);
         const pathParts = url.pathname.split('/').filter(p => p);
-        const game = pathParts[1];
-        const dataTypeRaw = pathParts[2];
         
-        if (!game || !dataTypeRaw) {
-            return new Response('game and data_type are required', { status: 400 });
+        // pathParts 示例: ["api", "原神", "活动.ics"]
+        if (pathParts.length < 3) {
+            return new Response('Invalid Path', { status: 400 });
         }
-        
+
+        // 1. 获取并解码参数，确保无论输入是否编码都能拿到原始中文
+        const game = decodeURIComponent(pathParts[1]);
+        const dataTypeRaw = decodeURIComponent(pathParts[2]);
         const data_type = dataTypeRaw.replace('.ics', '');
-        // ✅ 修复空格问题
-        const targetUrl = `https://api.trrw.tech/hoyo_calendar/ics?game=${game}&data_type=${data_type}`;
-        
-        const proxyRequest = new Request(targetUrl, {
-            method: context.request.method,
-            headers: context.request.headers,
-            body: ['GET', 'HEAD'].includes(context.request.method) ? undefined : context.request.body,
+
+        // 2. 使用 URLSearchParams 构建目标 URL (这会自动处理中文编码)
+        const targetUrl = new URL('https://api.trrw.tech/hoyo_calendar/ics');
+        targetUrl.searchParams.set('game', game);
+        targetUrl.searchParams.set('data_type', data_type);
+
+        console.log('Target URL:', targetUrl.toString());
+
+        // 3. 构造请求，强制使用 GET 方法
+        // 解决 curl -I 或浏览器某些行为导致的 405 错误
+        const proxyRequest = new Request(targetUrl.toString(), {
+            method: 'GET', 
+            headers: {
+                'Host': 'api.trrw.tech',
+                'User-Agent': context.request.headers.get('User-Agent') || 'EdgeOne-Function',
+                'Accept': '*/*'
+            }
         });
-        // ❌ 移除 Host 设置（fetch 会自动处理）
-        
+
         const response = await fetch(proxyRequest);
+
+        // 4. 处理响应头
         const newHeaders = new Headers(response.headers);
         
+        // 强制设置下载头和 MIME 类型
+        newHeaders.set("Content-Type", "text/calendar; charset=utf-8");
+        
+        // 支持中文文件名的标准写法
+        const fileName = `${game}${data_type}日历.ics`;
+        const encodedFileName = encodeURIComponent(fileName);
+        newHeaders.set("Content-Disposition", `attachment; filename="${encodedFileName}"; filename*=UTF-8''${encodedFileName}`);
+
         if (response.status === 200) {
-            newHeaders.set("Cache-Control", "public, max-age=3600, s-maxage=3600");
-            newHeaders.delete("Pragma");
-            newHeaders.delete("Expires");
+            newHeaders.set("Cache-Control", "public, max-age=3600");
+        } else {
+            // 如果后端报错了，把错误透传给浏览器，方便调试
+            console.error('Backend returned error:', response.status);
         }
-        // ⚠️ 谨慎删除 Content-Encoding，除非确认已处理解压
+
+        // 移除可能冲突的长度信息，由 Edge Runtime 自动处理流长度
         newHeaders.delete("Content-Length");
+        // 注意：除非你确定后端没压缩，否则不要随便 delete Content-Encoding
 
         return new Response(response.body, {
             status: response.status,
             statusText: response.statusText,
             headers: newHeaders
         });
+
     } catch (error) {
         console.error('ICS proxy error:', error);
-        return new Response('Internal Server Error', { status: 502 });
+        return new Response(`Internal Error: ${error.message}`, { status: 502 });
     }
 }
