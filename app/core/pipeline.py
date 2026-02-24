@@ -17,7 +17,7 @@ class Pipeline:
             self.logger.info(f" ├─获取到 {len(notices)} 条事件")
             for exporter in self.exporters:
                 self.logger.info(f" ├─{exporter.__class__.__name__}")
-                exporter.set_output_file(self.crawler.__class__.__name__)
+                exporter.set_output_file(self.crawler.game_name, self.crawler.data_type)
                 self.logger.info(f" │ ├─导出到 {exporter.output_file}")
                 exporter.run(self.crawler.cal_name, notices)
                 self.logger.success(" │ └─导出成功")

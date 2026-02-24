@@ -10,9 +10,20 @@ class BaseCrawler(ABC):
 
     @property
     @abstractmethod
+    def game_name(self) -> str:
+        """游戏名称"""
+        raise NotImplementedError
+
+    @property
+    @abstractmethod
+    def data_type(self) -> str:
+        """数据类型"""
+        raise NotImplementedError
+
+    @property
     def cal_name(self) -> str:
         """日历名称"""
-        raise NotImplementedError
+        return f"{self.game_name}{self.data_type}日历"
 
     @abstractmethod
     def run(self) -> list[Any]:

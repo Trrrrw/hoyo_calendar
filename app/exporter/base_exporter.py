@@ -3,7 +3,6 @@ from pathlib import Path
 from typing import Any
 
 from app.utils.logger import get_logger
-from app.utils.string_utils import camel_to_snake
 from app.core.settings import settings
 
 
@@ -19,18 +18,11 @@ class BaseExporter(ABC):
         """文件扩展名"""
         raise NotImplementedError
 
-    def set_output_file(self, crawler_name: str) -> None:
+    def set_output_file(self, game_name: str, data_type: str) -> None:
         """设置输出目录"""
-        snake_crawler_name = camel_to_snake(crawler_name)
-        output_dir = (
-            Path(settings.output_folder)
-            / self.file_extension
-            / snake_crawler_name.split("_")[0]
-        )
+        output_dir = Path(settings.output_folder) / self.file_extension / game_name
         output_dir.mkdir(parents=True, exist_ok=True)
-        self.output_file = (
-            output_dir / f"{snake_crawler_name.split('_')[1]}.{self.file_extension}"
-        )
+        self.output_file = output_dir / f"{data_type}.{self.file_extension}"
 
     @abstractmethod
     def run(self, cal_name: str, notices: list[Any]) -> None:

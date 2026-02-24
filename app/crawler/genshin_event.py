@@ -8,8 +8,12 @@ from app.services.bili_wiki_helper import get_site
 
 class GenshinEvent(BaseCrawler):
     @property
-    def cal_name(self) -> str:
-        return "原神活动日历"
+    def game_name(self) -> str:
+        return "原神"
+
+    @property
+    def data_type(self) -> str:
+        return "活动"
 
     def run(self) -> list[Event]:
         notices: list[Event] = []

@@ -9,8 +9,12 @@ from app.services.bili_wiki_helper import get_site
 
 class GenshinBirthday(BaseCrawler):
     @property
-    def cal_name(self) -> str:
-        return "原神生日日历"
+    def game_name(self) -> str:
+        return "原神"
+
+    @property
+    def data_type(self) -> str:
+        return "生日"
 
     def run(self) -> list[Birthday]:
         notices: list[Birthday] = []
