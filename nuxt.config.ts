@@ -3,11 +3,12 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
     modules: ['@ant-design-vue/nuxt'],
-    css: ['~/assets/css/custon.scss'],
+    css: ['~/assets/css/custom.scss'],
     routeRules: {
         '/api/**/*.ics': {
+            prerender: false,
             ssr: false,
-            headers: { 'x-skip-nuxt': 'true' }
+            swr: false
         }
     }
 })
