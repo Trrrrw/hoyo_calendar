@@ -33,6 +33,11 @@ class GenshinEvent(BaseCrawler):
             for result in resp.query.results.values():
                 if not result.printouts["开始时间"] or not result.printouts["结束时间"]:
                     continue
+                desc = (
+                    result.printouts["活动描述"][0]
+                    if result.printouts["活动描述"]
+                    else ""
+                )
                 tags = result.printouts["类型"].copy()
                 tags.extend(result.printouts["所属版本"])
                 if "永久活动" in tags:
@@ -41,9 +46,7 @@ class GenshinEvent(BaseCrawler):
                     Event(
                         id=self.generate_id(result.printouts["名称"][0]),
                         title=result.printouts["名称"][0],
-                        desc=result.printouts["活动描述"][0]
-                        if result.printouts["活动描述"]
-                        else "",
+                        desc=desc.replace("<br>", "\n"),
                         start=datetime.fromtimestamp(
                             int(result.printouts["开始时间"][0]["timestamp"])
                         ),
