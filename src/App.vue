@@ -38,6 +38,7 @@ onMounted(async () => {
             <template #description>自动同步《原神》《星穹铁道》《绝区零》的官方活动日程到您的日历应用</template>
           </a-card-meta>
         </a-card>
+        <a-alert message="在文件名后添加 `-时间轴版` 即可订阅带持续时间的完整日程(只适用于时间跨度较大的日历，例如“活动”)\n示例：https://cal.trrw.tech/api/原神/活动-时间轴版.ics" type="info" />
         <a-collapse v-model:activeKey="activeKey">
           <a-collapse-panel v-for="game in games_data" :key="game.name" :header="game.name">
             <a-list size="small">
