@@ -6,13 +6,13 @@
 
 ## 📥 订阅方法
 
-1. **复制**下方需要的日历链接，或前往网页 [cal.trrw.tech](https://cal.trrw.tech/) 复制
+1. **复制**前往网页 [cal.trrw.tech](https://cal.trrw.tech/) 复制
 2. **打开**您使用的日历应用（支持Google日历、Outlook、苹果日历等）
 3. 找到**订阅日历**功能，粘贴URL完成订阅
 
 ---
 
-## 🏮 原神日历
+<!-- ## 🏮 原神日历
 | 分类       | 订阅链接                                                    |
 | ---------- | ----------------------------------------------------------- |
 | 📌 全部日程 | [点击订阅](https://cal.trrw.tech/ics/原神.ics)              |
@@ -39,19 +39,18 @@
 | 📺 前瞻直播   | [点击订阅](https://cal.trrw.tech/ics/绝区零/前瞻特别节目.ics) |
 | ⚙️ 版本更新   | [点击订阅](https://cal.trrw.tech/ics/绝区零/版本信息.ics)     |
 
----
+--- -->
 
 ## ⚙️ 高级选项
 
-🔹 **连续日程模式**：在URL的`/ics/`后添加`continuous/`即可订阅带持续时间的完整日程  
-> 示例：`https://raw.gitmirror.com/Trrrrw/hoyo_calendar/main/ics/continuous/原神.ics`
+🔹 **连续日程模式**：在文件名后添加`-时间轴版`即可订阅带持续时间的完整日程(只适用于时间跨度较大的日历，例如“活动”)  
+> 示例：`https://cal.trrw.tech/api/原神/活动-时间轴版.ics`
 
 ---
 
 ## 🚀 快速开始
 ### 环境要求
-- Nodejs 18+
-  - yarn
+- uv
 
 ### 操作步骤
 ```bash
@@ -60,8 +59,7 @@ git clone https://github.com/Trrrrw/hoyo_calendar.git
 cd hoyo_calendar
 
 # 运行项目
-yarn
-yarn dev
+uv run -m app.main
 ```
 
 ---
