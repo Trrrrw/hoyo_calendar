@@ -1,8 +1,8 @@
 import pytz
 import zlib
 from pathlib import Path
-from datetime import datetime
-from typing import Any, Optional
+from datetime import date, datetime
+from typing import Any, Optional, Union
 from icalendar import Calendar as ICalendar
 from icalendar import Event as IEvent
 from icalendar import vRecur
@@ -18,24 +18,27 @@ class CalEvent(IEvent):
     def __init__(
         self,
         summary: str,
-        dtstart: datetime,
-        dtend: Optional[datetime] = None,
+        dtstart: Union[date, datetime],
+        dtend: Optional[Union[date, datetime]] = None,
         description: str = "",
         location: str = "",
         rrule: Optional[dict[str, Any]] = None,
     ) -> None:
         super().__init__()
 
+        if isinstance(dtstart, datetime):
+            processed_start = dtstart.replace(tzinfo=TZ)
+        else:
+            processed_start = dtstart
+
         self.add("summary", summary)
-        self.add(
-            "dtstart",
-            dtstart.replace(tzinfo=TZ),
-        )
+        self.add("dtstart", processed_start)
         if dtend:
-            self.add(
-                "dtend",
-                dtend.replace(tzinfo=TZ),
-            )
+            if isinstance(dtend, datetime):
+                processed_end = dtend.replace(tzinfo=TZ)
+            else:
+                processed_end = dtend
+            self.add("dtend", processed_end)
         if description:
             self.add("description", description)
         if location:
@@ -69,8 +72,8 @@ class Calendar(ICalendar):
     def add_event(
         self,
         summary: str,
-        dtstart: datetime,
-        dtend: Optional[datetime] = None,
+        dtstart: Union[date, datetime],
+        dtend: Optional[Union[date, datetime]] = None,
         description: str = "",
         location: str = "",
         rrule: Optional[dict[str, Any]] = None,
