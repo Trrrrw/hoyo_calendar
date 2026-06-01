@@ -44,6 +44,8 @@ class ZZZBirthday(BaseCrawler):
                     month = int(result.printouts["生日"][0].split("月")[0])
                     day = int(result.printouts["生日"][0].split("月")[1].split("日")[0])
 
+                if result.printouts["实装日期"][0] == "未实装":
+                    continue
                 release_date_str = re.search(
                     r"\d{4}年\d{1,2}月\d{1,2}日", result.printouts["实装日期"][0]
                 ).group()

@@ -61,4 +61,13 @@ class GenshinBirthday(BaseCrawler):
                 )
             page += 1
 
+        notices.append(
+            Birthday(
+                id=self.generate_id("派蒙"),
+                name="派蒙",
+                month=6,
+                day=1,
+                release_date=datetime.strptime("2020年09月15日", "%Y年%m月%d日"),
+            )
+        )
         return notices
