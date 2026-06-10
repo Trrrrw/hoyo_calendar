@@ -1,3 +1,4 @@
+import time
 from datetime import datetime
 
 from app.crawler.base_crawler import BaseCrawler
@@ -42,17 +43,37 @@ class GenshinEvent(BaseCrawler):
                 tags.extend(result.printouts["所属版本"])
                 if "永久活动" in tags:
                     continue
+
+                time_formats = ["%w/%Y/%m/%d/%H/%M/%S/%f", "%w/%Y/%m/%d"]
+                start, end = None, None
+                for format in time_formats:
+                    if start is None:
+                        try:
+                            start = datetime.strptime(
+                                result.printouts["开始时间"][0]["raw"],
+                                format,
+                            )
+                        except:
+                            pass
+                    if end is None:
+                        try:
+                            end = datetime.strptime(
+                                result.printouts["结束时间"][0]["raw"],
+                                format,
+                            )
+                        except:
+                            pass
+                    if start is not None and end is not None:
+                        break
+                if start is None or end is None:
+                    continue
                 notices.append(
                     Event(
                         id=self.generate_id(result.printouts["名称"][0]),
                         title=result.printouts["名称"][0],
                         desc=desc.replace("<br>", "\n"),
-                        start=datetime.fromtimestamp(
-                            int(result.printouts["开始时间"][0]["timestamp"])
-                        ),
-                        end=datetime.fromtimestamp(
-                            int(result.printouts["结束时间"][0]["timestamp"])
-                        ),
+                        start=start,
+                        end=end,
                         tags=tags,
                         url=result.printouts["官方公告链接"][0]
                         if result.printouts["官方公告链接"]
