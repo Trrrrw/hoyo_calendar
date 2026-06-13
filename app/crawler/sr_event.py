@@ -40,10 +40,12 @@ class SREvent(BaseCrawler):
                 )
                 tags = result.printouts["类型"].copy()
                 tags.extend(result.printouts["所属版本"])
-                if any(
-                    long_event_tag in tags
-                    for long_event_tag in ["永久活动", "常驻活动"]
-                ):
+                # if any(
+                #     long_event_tag in tags
+                #     for long_event_tag in ["永久活动", "常驻活动"]
+                # ):
+                #     continue
+                if result.printouts["结束时间"][0] == "9999/01/01":
                     continue
                 notices.append(
                     Event(
