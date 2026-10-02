@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Alert, Spin } from 'antd'
+import { Alert, Empty, Spin } from 'antd'
 import dayjs from 'dayjs'
 import type { Game } from '../types/calendar'
 import { useCalendarEntries } from '../hooks/useCalendarApi'
@@ -7,42 +7,34 @@ import { TimelineChart } from './timeline/TimelineChart'
 import { TimelineControls } from './timeline/TimelineControls'
 
 interface CalendarViewProps {
-  game: Game
   games: Game[]
+  selectedGames: Game[]
   selectedKinds: string[]
-  onGameChange: (gameId: string) => void
+  onGamesChange: (gameIds: string[]) => void
   onKindsChange: (kinds: string[]) => void
 }
 
 export function CalendarView({
-  game,
   games,
+  selectedGames,
   selectedKinds,
-  onGameChange,
+  onGamesChange,
   onKindsChange,
 }: CalendarViewProps) {
-  const { data, loading, error } = useCalendarEntries(game.id)
-  const displayEntries = useMemo(
-    () => {
-      const now = dayjs()
-
-      return data.filter(
-        (entry) => entry.kind !== '角色生日' && dayjs(entry.end).isAfter(now),
-      )
-    },
-    [data],
-  )
-  const kinds = useMemo(
-    () => [...new Set(displayEntries.map((entry) => entry.kind))],
-    [displayEntries],
-  )
-  const filteredEntries = useMemo(
-    () =>
-      selectedKinds.length === 0
-        ? displayEntries
-        : displayEntries.filter((entry) => selectedKinds.includes(entry.kind)),
-    [displayEntries, selectedKinds],
-  )
+  const { data, loading, error } = useCalendarEntries(selectedGames)
+  const filteredEntries = useMemo(() => {
+    const now = dayjs()
+    return data.filter(
+      (entry) =>
+        dayjs(entry.end).isAfter(now) && selectedKinds.includes(entry.kind),
+    )
+  }, [data, selectedKinds])
+  const selectionMessage =
+    selectedGames.length === 0
+      ? '请选择要显示的游戏'
+      : selectedKinds.length === 0
+        ? '请选择要显示的事件类型'
+        : null
 
   return (
     <div className="relative h-full min-h-0 overflow-hidden bg-white">
@@ -50,24 +42,30 @@ export function CalendarView({
         <Alert
           type="error"
           showIcon
-          message="日程加载失败"
+          title="部分日程加载失败"
           description={error}
           className="absolute top-4 left-1/2 z-30 w-[min(560px,calc(100%-32px))] -translate-x-1/2 shadow"
         />
       )}
       <Spin
-        spinning={loading}
+        spinning={loading && selectedGames.length > 0}
         description="正在同步日程"
         className="h-full [&_.ant-spin-container]:h-full"
       >
-        <TimelineChart entries={filteredEntries} />
+        {selectionMessage ? (
+          <Empty
+            className="grid h-full place-content-center"
+            description={selectionMessage}
+          />
+        ) : (
+          <TimelineChart entries={filteredEntries} />
+        )}
       </Spin>
       <TimelineControls
         games={games}
-        gameId={game.id}
-        kinds={kinds}
+        selectedGameIds={selectedGames.map((game) => game.id)}
         selectedKinds={selectedKinds}
-        onGameChange={onGameChange}
+        onGamesChange={onGamesChange}
         onKindsChange={onKindsChange}
       />
     </div>

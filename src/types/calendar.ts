@@ -22,6 +22,10 @@ export interface CalendarEntry {
   cover?: string | null
 }
 
+export interface TimelineEntry extends CalendarEntry {
+  game: Game
+}
+
 export interface CalendarSelectorOption {
   value: string
   label: string

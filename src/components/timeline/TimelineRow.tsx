@@ -8,12 +8,16 @@ interface TimelineRowProps {
   entry: CalendarEntry
   rangeStart: Dayjs
   rangeEnd: Dayjs
+  onSelect: () => void
+  selected: boolean
 }
 
 export function TimelineRow({
   entry,
   rangeStart,
   rangeEnd,
+  onSelect,
+  selected,
 }: TimelineRowProps) {
   const fallbackColor = getKindColor(entry.kind)
   const coverUrl = entry.cover ?? undefined
@@ -23,9 +27,14 @@ export function TimelineRow({
 
   return (
     <div className="relative h-[76px] border-b border-neutral-100 last:border-b-0 hover:bg-neutral-50/60">
-      <div
-        title={`${entry.kind} · ${entry.title}\n${formatEntryTime(entry)}`}
-        className="absolute top-3 z-[1] h-[52px] min-w-14 overflow-clip rounded-lg text-sm font-medium text-white shadow-sm"
+      <button
+        type="button"
+        onClick={onSelect}
+        aria-label={`查看${entry.title}的活动详情`}
+        aria-haspopup="dialog"
+        aria-expanded={selected}
+        title={`点击查看活动详情\n${entry.kind} · ${entry.title}\n${formatEntryTime(entry)}`}
+        className="absolute top-3 z-[1] h-[52px] min-w-14 cursor-pointer overflow-clip rounded-lg border-0 p-0 text-left text-sm font-medium text-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
         style={{
           left: position.left,
           width: position.width,
@@ -59,7 +68,7 @@ export function TimelineRow({
             )}
           </div>
         </div>
-      </div>
+      </button>
     </div>
   )
 }

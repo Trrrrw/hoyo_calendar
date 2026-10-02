@@ -5,7 +5,11 @@ import {
   getCalendarCapabilities,
   getGames,
 } from '../services/calendarApi'
-import type { CalendarCapabilities, CalendarEntry, Game } from '../types/calendar'
+import type {
+  CalendarCapabilities,
+  TimelineEntry,
+  Game,
+} from '../types/calendar'
 
 interface AsyncState<T> {
   data: T
@@ -36,8 +40,12 @@ export function useGames(): AsyncState<Game[]> {
   return state
 }
 
-export function useCalendarEntries(gameId: string): AsyncState<CalendarEntry[]> {
-  const [state, setState] = useState<AsyncState<CalendarEntry[]>>({
+export function useCalendarEntries(games: Game[]): AsyncState<TimelineEntry[]> {
+  const requestKey = games.map((game) => game.id).join(',')
+  const [state, setState] = useState<
+    AsyncState<TimelineEntry[]> & { requestKey: string }
+  >({
+    requestKey: '',
     data: [],
     loading: true,
     error: null,
@@ -48,20 +56,40 @@ export function useCalendarEntries(gameId: string): AsyncState<CalendarEntry[]> 
     const from = month.subtract(7, 'day').format('YYYY-MM-DD')
     const to = month.add(1, 'month').add(7, 'day').format('YYYY-MM-DD')
 
-    setState((current) => ({ ...current, loading: true, error: null }))
-    getCalendar(gameId, from, to, controller.signal)
-      .then((response) =>
-        setState({ data: response.items, loading: false, error: null }),
-      )
-      .catch((error: unknown) => {
-        if (controller.signal.aborted) return
-        setState({ data: [], loading: false, error: getErrorMessage(error) })
+    Promise.allSettled(
+      games.map(async (game) => {
+        const response = await getCalendar(game.id, from, to, controller.signal)
+        return response.items.map((entry) => ({ ...entry, game }))
+      }),
+    ).then((results) => {
+      if (controller.signal.aborted) return
+      const data: TimelineEntry[] = []
+      const errors: string[] = []
+      results.forEach((result, index) => {
+        if (result.status === 'fulfilled') data.push(...result.value)
+        else
+          errors.push(`${games[index].name}：${getErrorMessage(result.reason)}`)
       })
+      data.sort(
+        (left, right) =>
+          Date.parse(left.start) - Date.parse(right.start) ||
+          left.game.index - right.game.index ||
+          left.id.localeCompare(right.id),
+      )
+      setState({
+        requestKey,
+        data,
+        loading: false,
+        error: errors.length ? errors.join('；') : null,
+      })
+    })
 
     return () => controller.abort()
-  }, [gameId])
+  }, [games, requestKey])
 
-  return state
+  return state.requestKey === requestKey
+    ? state
+    : { data: [], loading: true, error: null }
 }
 
 export function useCalendarCapabilities(

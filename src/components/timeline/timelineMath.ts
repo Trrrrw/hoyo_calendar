@@ -46,8 +46,10 @@ export function getTimelinePosition(
   const clippedStart = start.isBefore(rangeStart) ? rangeStart : start
   const clippedEnd = end.isAfter(rangeEnd) ? rangeEnd : end
   const totalMinutes = rangeEnd.diff(rangeStart, 'minute', true)
-  const left = clippedStart.diff(rangeStart, 'minute', true) / totalMinutes * 100
-  const width = clippedEnd.diff(clippedStart, 'minute', true) / totalMinutes * 100
+  const left =
+    (clippedStart.diff(rangeStart, 'minute', true) / totalMinutes) * 100
+  const width =
+    (clippedEnd.diff(clippedStart, 'minute', true) / totalMinutes) * 100
 
   return {
     left: `${left}%`,
@@ -55,13 +57,15 @@ export function getTimelinePosition(
   }
 }
 
-export function getVisibleEntries(
-  entries: CalendarEntry[],
+export function getVisibleEntries<T extends CalendarEntry>(
+  entries: T[],
   rangeStart: Dayjs,
   rangeEnd: Dayjs,
-): CalendarEntry[] {
+): T[] {
   return entries
-    .filter((entry) => getTimelinePosition(entry, rangeStart, rangeEnd) !== null)
+    .filter(
+      (entry) => getTimelinePosition(entry, rangeStart, rangeEnd) !== null,
+    )
     .sort((first, second) => {
       const startOrder = first.start.localeCompare(second.start)
       return startOrder || first.end.localeCompare(second.end)
