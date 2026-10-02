@@ -115,6 +115,9 @@ export function SubscriptionBuilder({ game }: SubscriptionBuilderProps) {
         <div className="grid grid-cols-[minmax(0,1fr)_minmax(340px,0.65fr)] items-start gap-4 max-lg:grid-cols-1">
           <Collapse
             className="[&_.ant-form-item:last-child]:mb-0"
+            defaultActiveKey={
+              window.matchMedia('(min-width: 1024px)').matches ? ['settings'] : []
+            }
             expandIconPlacement="end"
             items={[
               {
