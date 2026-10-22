@@ -41,7 +41,7 @@ function extractPalette(coverUrl: string): Promise<CoverPalette | null> {
   const cached = paletteCache.get(coverUrl)
   if (cached) return cached
 
-  const pending = import('node-vibrant/browser')
+  const pending = import('../services/coverPalette')
     .then(({ Vibrant }) => Vibrant.from(coverUrl).getPalette())
     .then((palette) => {
       const swatch =
