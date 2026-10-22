@@ -1,0 +1,6 @@
+{
+  "nodeVersion": "24.18.0",
+  "installCommand": "npm install --global pnpm@12.14.0 && pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist"
+}
