@@ -41,9 +41,8 @@ export function getNewsReference(value: string, gameId: string): NewsReference |
 
 export async function getNewsDetail(reference: NewsReference, signal: AbortSignal): Promise<NewsDetail> {
   const { gameId, id, source } = reference
-  const query = new URLSearchParams({ source })
   const response = await fetch(
-    `${BACKEND_BASE}/api/v1/games/${encodeURIComponent(gameId)}/news/${encodeURIComponent(id)}?${query}`,
+    `${BACKEND_BASE}/api/v1/news/${encodeURIComponent(gameId)}/${encodeURIComponent(source)}/${encodeURIComponent(id)}`,
     { signal },
   )
   if (!response.ok) throw new Error('公告暂时无法加载，可通过原帖查看完整信息')
