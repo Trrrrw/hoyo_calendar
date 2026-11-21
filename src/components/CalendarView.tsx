@@ -37,7 +37,7 @@ export function CalendarView({
         : null
 
   return (
-    <div className="relative h-full min-h-0 overflow-hidden bg-white">
+    <div className="relative h-full min-h-0 overflow-hidden bg-[var(--bg-surface)]">
       {error && (
         <Alert
           type="error"

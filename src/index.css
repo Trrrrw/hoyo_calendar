@@ -1,1 +1,105 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-canvas: #f5f5f5;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f0f0f0;
+  --bg-hover: #fafafa;
+  --ink-primary: rgba(0, 0, 0, 0.88);
+  --ink-secondary: #595959;
+  --ink-muted: #8c8c8c;
+  --border-subtle: #e8e8e8;
+  --border-strong: #d9d9d9;
+  --grid-line: #f0f0f0;
+  --accent-primary: #1677ff;
+  --accent-primary-soft: rgba(22, 119, 255, 0.09);
+  --today-col: rgba(22, 119, 255, 0.06);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  --bg-canvas: #0f0f0f;
+  --bg-surface: #141414;
+  --bg-subtle: #1f1f1f;
+  --bg-hover: #1c1c1c;
+  --ink-primary: rgba(255, 255, 255, 0.88);
+  --ink-secondary: #bfbfbf;
+  --ink-muted: #8c8c8c;
+  --border-subtle: #262626;
+  --border-strong: #3a3a3a;
+  --grid-line: #1f1f1f;
+  --accent-primary: #3c89e8;
+  --accent-primary-soft: rgba(60, 137, 232, 0.16);
+  --today-col: rgba(60, 137, 232, 0.12);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-canvas);
+  color: var(--ink-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 活动详情居中弹窗（与蒸汽鸟报保持一致） */
+.event-detail-modal .ant-modal-container,
+.event-detail-modal .ant-modal-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.event-detail-modal .ant-modal-header {
+  margin: 0;
+  padding: 14px 56px 14px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.event-detail-modal .ant-modal-close {
+  top: 12px;
+  inset-inline-end: 12px;
+}
+
+.event-detail-modal .ant-modal-body {
+  max-height: calc(86dvh - 116px);
+  overflow-y: auto;
+  padding: 24px 28px 28px;
+  background: var(--bg-surface);
+}
+
+.event-detail-modal .ant-modal-footer {
+  margin: 0;
+  padding: 12px 24px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+@media (max-width: 640px) {
+  .event-detail-modal .ant-modal {
+    max-width: calc(100vw - 16px);
+  }
+
+  .event-detail-modal .ant-modal-header {
+    padding: 12px 52px 12px 16px;
+  }
+
+  .event-detail-modal .ant-modal-body {
+    max-height: calc(90dvh - 110px);
+    padding: 18px 16px 24px;
+  }
+
+  .event-detail-modal .ant-modal-footer {
+    padding: 10px 16px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

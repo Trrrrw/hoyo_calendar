@@ -30,16 +30,16 @@ export function TimelineControls({
     <div className="w-[320px] max-w-[calc(100vw-64px)] space-y-5 py-2">
       <section aria-label="显示的游戏">
         <div className="mb-3 flex items-center justify-between">
-          <h3 className="text-sm font-medium text-neutral-700">游戏</h3>
+          <h3 className="m-0 text-sm font-medium text-[var(--ink-primary)]">游戏</h3>
           <button
             type="button"
-            className="cursor-pointer text-xs text-blue-600"
+            className="cursor-pointer border-0 bg-transparent text-xs text-[var(--accent-primary)]"
             onClick={() => onGamesChange(games.map((game) => game.id))}
           >
             全选
           </button>
         </div>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-3">
           {games.map((game) => {
             const selected = selectedGameIds.includes(game.id)
             return (
@@ -50,11 +50,15 @@ export function TimelineControls({
                 title={game.name}
                 aria-pressed={selected}
                 onClick={() => onGamesChange(toggle(selectedGameIds, game.id))}
-                className={`relative grid size-[76px] cursor-pointer place-items-center rounded-2xl border-2 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${selected ? 'border-blue-500 bg-blue-50 ring-2 ring-blue-100' : 'border-neutral-200 bg-white hover:border-blue-300'}`}
+                className={`relative grid size-[72px] cursor-pointer place-items-center rounded-xl border-2 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent-primary)] ${
+                  selected
+                    ? 'border-[var(--accent-primary)] bg-[var(--accent-primary-soft)]'
+                    : 'border-[var(--border-subtle)] bg-[var(--bg-surface)] hover:border-[var(--accent-primary)]'
+                }`}
               >
                 <Avatar
                   shape="square"
-                  size={60}
+                  size={56}
                   src={getAssetUrl(
                     game.icon_variants.find((variant) => variant.size === 64)
                       ?.url ?? game.icon,
@@ -65,7 +69,7 @@ export function TimelineControls({
                 {selected && (
                   <span
                     aria-hidden="true"
-                    className="absolute -right-1.5 -bottom-1.5 grid size-5 place-items-center rounded-full bg-blue-500 text-xs text-white ring-2 ring-white"
+                    className="absolute -right-1.5 -bottom-1.5 grid size-5 place-items-center rounded-full bg-[var(--accent-primary)] text-xs text-white ring-2 ring-[var(--bg-surface)]"
                   >
                     ✓
                   </span>
@@ -77,13 +81,13 @@ export function TimelineControls({
       </section>
       <section
         aria-label="显示的事件类型"
-        className="border-t border-neutral-100 pt-4"
+        className="border-t border-[var(--border-subtle)] pt-4"
       >
         <div className="mb-3 flex items-center justify-between">
-          <h3 className="text-sm font-medium text-neutral-700">事件类型</h3>
+          <h3 className="m-0 text-sm font-medium text-[var(--ink-primary)]">事件类型</h3>
           <button
             type="button"
-            className="cursor-pointer text-xs text-blue-600"
+            className="cursor-pointer border-0 bg-transparent text-xs text-[var(--accent-primary)]"
             onClick={() => onKindsChange([...TIMELINE_KINDS])}
           >
             全选
@@ -98,10 +102,14 @@ export function TimelineControls({
                 type="button"
                 aria-pressed={selected}
                 onClick={() => onKindsChange(toggle(selectedKinds, kind))}
-                className={`flex min-h-11 cursor-pointer items-center justify-between gap-2 rounded-xl border-2 px-3 py-2 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${selected ? 'border-blue-500 bg-blue-50 font-medium text-blue-700' : 'border-neutral-200 bg-white text-neutral-600 hover:border-blue-300'}`}
+                className={`flex min-h-10 cursor-pointer items-center justify-between gap-2 rounded-lg border px-3 py-2 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent-primary)] ${
+                  selected
+                    ? 'border-[var(--accent-primary)] bg-[var(--accent-primary-soft)] font-medium text-[var(--accent-primary)]'
+                    : 'border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--ink-secondary)] hover:border-[var(--accent-primary)]'
+                }`}
               >
                 {kind}
-                <span aria-hidden="true" className="w-4 text-blue-500">
+                <span aria-hidden="true" className="w-4 text-[var(--accent-primary)]">
                   {selected ? '✓' : ''}
                 </span>
               </button>
@@ -131,8 +139,8 @@ export function TimelineControls({
           icon={
             <svg
               viewBox="0 0 24 24"
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.8"

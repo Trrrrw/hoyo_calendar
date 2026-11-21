@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Empty } from 'antd'
+import { Button, Empty } from 'antd'
 import dayjs, { type Dayjs } from 'dayjs'
 import { usePrimaryHorizontalWheel } from '../../hooks/usePrimaryHorizontalWheel'
 import type { TimelineEntry } from '../../types/calendar'
@@ -31,15 +31,12 @@ export function TimelineChart({ entries }: TimelineChartProps) {
   const todayDay = today.valueOf()
 
   useEffect(() => {
-    const container = scrollRef.current
-    if (!container) return
-
-    const focusOffset = dayjs(todayDay).diff(rangeStartDay, 'day')
-    const dayWidth = container.scrollWidth / days
-    const centeredOffset =
-      focusOffset * dayWidth - (container.clientWidth - dayWidth) / 2
-    container.scrollLeft = Math.max(0, centeredOffset)
+    centerTimelineOnDay(scrollRef.current, days, rangeStartDay, todayDay, 'auto')
   }, [days, rangeStartDay, scrollRef, todayDay])
+
+  const handleJumpToday = () => {
+    centerTimelineOnDay(scrollRef.current, days, rangeStartDay, todayDay, 'smooth')
+  }
 
   if (visibleEntries.length === 0) {
     return (
@@ -54,7 +51,7 @@ export function TimelineChart({ entries }: TimelineChartProps) {
     <>
       <div
         ref={scrollRef}
-        className="h-full overflow-auto overscroll-contain bg-white"
+        className="h-full overflow-auto overscroll-contain bg-[var(--bg-surface)]"
       >
         <div
           className="flex min-h-full w-full flex-col"
@@ -65,13 +62,13 @@ export function TimelineChart({ entries }: TimelineChartProps) {
             className="relative flex-1"
             style={{
               backgroundImage:
-                'linear-gradient(to right, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px))',
+                'linear-gradient(to right, transparent calc(100% - 1px), var(--grid-line) calc(100% - 1px))',
               backgroundSize: `${100 / days}% 100%`,
             }}
           >
             {todayOffset !== null && (
               <span
-                className="absolute inset-y-0 bg-blue-50/60"
+                className="pointer-events-none absolute inset-y-0 bg-[var(--today-col)]"
                 style={{
                   left: `${(todayOffset / days) * 100}%`,
                   width: `${100 / days}%`,
@@ -93,6 +90,18 @@ export function TimelineChart({ entries }: TimelineChartProps) {
           </div>
         </div>
       </div>
+
+      {todayOffset !== null && (
+        <div className="absolute bottom-6 left-6 z-20 max-sm:bottom-4 max-sm:left-4">
+          <Button
+            onClick={handleJumpToday}
+            className="shadow-sm"
+          >
+            回到今天
+          </Button>
+        </div>
+      )}
+
       {selectedEntry && (
         <EventDetails
           entry={selectedEntry}
@@ -102,6 +111,21 @@ export function TimelineChart({ entries }: TimelineChartProps) {
       )}
     </>
   )
+}
+
+function centerTimelineOnDay(
+  container: HTMLDivElement | null,
+  days: number,
+  rangeStartDay: number,
+  todayDay: number,
+  behavior: ScrollBehavior,
+) {
+  if (!container) return
+  const focusOffset = dayjs(todayDay).diff(rangeStartDay, 'day')
+  const dayWidth = container.scrollWidth / days
+  const centeredOffset =
+    focusOffset * dayWidth - (container.clientWidth - dayWidth) / 2
+  container.scrollTo({ left: Math.max(0, centeredOffset), behavior })
 }
 
 function getTodayOffset(

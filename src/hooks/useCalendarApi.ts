@@ -50,6 +50,7 @@ export function useCalendarEntries(games: Game[]): AsyncState<TimelineEntry[]> {
     loading: true,
     error: null,
   })
+
   useEffect(() => {
     const controller = new AbortController()
     const month = dayjs().startOf('month')
@@ -95,7 +96,10 @@ export function useCalendarEntries(games: Game[]): AsyncState<TimelineEntry[]> {
 export function useCalendarCapabilities(
   gameId: string,
 ): AsyncState<CalendarCapabilities | null> {
-  const [state, setState] = useState<AsyncState<CalendarCapabilities | null>>({
+  const [state, setState] = useState<
+    AsyncState<CalendarCapabilities | null> & { gameId: string }
+  >({
+    gameId: '',
     data: null,
     loading: true,
     error: null,
@@ -104,18 +108,24 @@ export function useCalendarCapabilities(
   useEffect(() => {
     const controller = new AbortController()
 
-    setState({ data: null, loading: true, error: null })
     getCalendarCapabilities(gameId, controller.signal)
-      .then((data) => setState({ data, loading: false, error: null }))
+      .then((data) => setState({ gameId, data, loading: false, error: null }))
       .catch((error: unknown) => {
         if (controller.signal.aborted) return
-        setState({ data: null, loading: false, error: getErrorMessage(error) })
+        setState({
+          gameId,
+          data: null,
+          loading: false,
+          error: getErrorMessage(error),
+        })
       })
 
     return () => controller.abort()
   }, [gameId])
 
-  return state
+  return state.gameId === gameId
+    ? state
+    : { data: null, loading: true, error: null }
 }
 
 function getErrorMessage(error: unknown): string {

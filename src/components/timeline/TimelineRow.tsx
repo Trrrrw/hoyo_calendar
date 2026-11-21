@@ -26,7 +26,7 @@ export function TimelineRow({
   if (!position) return null
 
   return (
-    <div className="relative h-[76px] border-b border-neutral-100 last:border-b-0 hover:bg-neutral-50/60">
+    <div className="relative h-[76px] border-b border-[var(--grid-line)] last:border-b-0 hover:bg-[var(--bg-hover)]">
       <button
         type="button"
         onClick={onSelect}
@@ -34,7 +34,7 @@ export function TimelineRow({
         aria-haspopup="dialog"
         aria-expanded={selected}
         title={`点击查看活动详情\n${entry.kind} · ${entry.title}\n${formatEntryTime(entry)}`}
-        className="absolute top-3 z-[1] h-[52px] min-w-14 cursor-pointer overflow-clip rounded-lg border-0 p-0 text-left text-sm font-medium text-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+        className="absolute top-3 z-[1] h-[52px] min-w-14 cursor-pointer overflow-clip rounded-lg border-0 p-0 text-left text-sm font-medium text-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent-primary)]"
         style={{
           left: position.left,
           width: position.width,

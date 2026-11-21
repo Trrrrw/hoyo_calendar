@@ -1,4 +1,4 @@
-import { Avatar, Segmented } from 'antd'
+import { Avatar } from 'antd'
 import { getAssetUrl } from '../services/calendarApi'
 import type { Game } from '../types/calendar'
 
@@ -17,29 +17,28 @@ export function GameSwitcher({
 }: GameSwitcherProps) {
   return (
     <section
-      className="mb-4 flex w-full max-w-3xl items-center gap-6 rounded-2xl border border-neutral-200 bg-white p-3 shadow-sm shadow-neutral-200/60 max-sm:block"
+      className="mb-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3 py-2.5"
       aria-label="选择游戏"
     >
-      <div className="min-w-36 px-1 max-sm:mb-3">
-        <div className="font-semibold text-neutral-900">游戏日程</div>
-        <div className="mt-0.5 text-xs text-neutral-500">选择要订阅的游戏</div>
-      </div>
-
-      <Segmented
-        block
-        shape="round"
-        size="large"
-        value={value}
-        disabled={loading}
-        onChange={(gameId) => onChange(String(gameId))}
-        className="min-w-0 flex-1 !bg-neutral-100 !p-1 [&_.ant-segmented-item]:min-w-0 [&_.ant-segmented-item-label]:!px-3 [&_.ant-segmented-item-selected]:!text-blue-600"
-        options={games.map((game) => ({
-          value: game.id,
-          tooltip: game.name,
-          label: (
-            <span className="flex h-9 min-w-0 items-center justify-center gap-2">
+      <div className="flex items-center gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist">
+        {games.map((game) => {
+          const active = game.id === value
+          return (
+            <button
+              key={game.id}
+              type="button"
+              role="tab"
+              aria-selected={active}
+              disabled={loading}
+              onClick={() => onChange(game.id)}
+              className={`inline-flex shrink-0 cursor-pointer items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent-primary)] ${
+                active
+                  ? 'border-[color-mix(in_srgb,var(--accent-primary),transparent_65%)] bg-[var(--accent-primary-soft)] font-semibold text-[var(--accent-primary)]'
+                  : 'border-transparent bg-transparent font-medium text-[var(--ink-secondary)] hover:bg-[var(--bg-subtle)] hover:text-[var(--ink-primary)]'
+              }`}
+            >
               <Avatar
-                size={26}
+                size={22}
                 src={getAssetUrl(
                   game.icon_variants.find((variant) => variant.size === 64)?.url ??
                     game.icon,
@@ -47,19 +46,11 @@ export function GameSwitcher({
               >
                 {game.name.at(0)}
               </Avatar>
-              <span className="min-w-0 truncate font-medium">
-                <span className="max-sm:hidden">{game.name}</span>
-                <span className="sm:hidden">{getCompactGameName(game)}</span>
-              </span>
-            </span>
-          ),
-        }))}
-      />
+              <span className="whitespace-nowrap">{game.name}</span>
+            </button>
+          )
+        })}
+      </div>
     </section>
   )
-}
-
-function getCompactGameName(game: Game) {
-  if (game.id === 'sr') return '星铁'
-  return game.name
 }

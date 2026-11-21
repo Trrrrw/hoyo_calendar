@@ -11,30 +11,30 @@ export function useCoverPalette(
   coverUrl: string | undefined,
   fallbackColor: string,
 ): CoverPalette {
-  const fallbackPalette = getFallbackPalette(fallbackColor)
-  const [palette, setPalette] = useState<CoverPalette>(fallbackPalette)
+  const [resolved, setResolved] = useState<{
+    coverUrl: string
+    palette: CoverPalette
+  } | null>(null)
 
   useEffect(() => {
+    if (!coverUrl) return
     let active = true
 
-    if (!coverUrl) {
-      setPalette(getFallbackPalette(fallbackColor))
-      return () => {
-        active = false
-      }
-    }
-
-    setPalette(getFallbackPalette(fallbackColor))
     extractPalette(coverUrl).then((result) => {
-      if (active && result) setPalette(result)
+      if (active && result) {
+        setResolved({ coverUrl, palette: result })
+      }
     })
 
     return () => {
       active = false
     }
-  }, [coverUrl, fallbackColor])
+  }, [coverUrl])
 
-  return palette
+  if (coverUrl && resolved?.coverUrl === coverUrl) {
+    return resolved.palette
+  }
+  return getFallbackPalette(fallbackColor)
 }
 
 function extractPalette(coverUrl: string): Promise<CoverPalette | null> {
